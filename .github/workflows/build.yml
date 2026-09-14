@@ -4,11 +4,18 @@ name: Rebuild calendar feed
 # regenerated .ics, and pushes it — no local Python/pandas setup needed for a
 # routine refresh: drop the new Timetables.xlsx in the repo, or edit
 # overrides.csv/config.json/buildings.json, and push.
+#
+# Also prepared for two English-group feeds (see README "Deux groupes
+# d'anglais"): the EN1/EN2 steps below are no-ops today (the `if:` guard
+# skips them while Timetables_EN1.xlsx / Timetables_EN2.xlsx don't exist) and
+# switch themselves on the moment those files are added and pushed.
 on:
   push:
     branches: [main]
     paths:
       - "Timetables.xlsx"
+      - "Timetables_EN1.xlsx"
+      - "Timetables_EN2.xlsx"
       - "overrides.csv"
       - "config.json"
       - "buildings.json"
@@ -37,13 +44,30 @@ jobs:
       - name: Show what would change
         run: python dcu_to_ics.py --diff DCU_Semester1_2026.ics
 
-      - name: Build the feed
+      - name: Build the main feed
         run: python dcu_to_ics.py
 
-      - name: Commit if the feed changed
+      - name: Build the English Group 1 feed
+        if: hashFiles('Timetables_EN1.xlsx') != ''
+        run: |
+          python dcu_to_ics.py --xlsx Timetables_EN1.xlsx \
+            --out DCU_Semester1_2026_EN1.ics \
+            --calendar-name "DCU — Semestre 1 2026/27 (Anglais groupe 1)"
+
+      - name: Build the English Group 2 feed
+        if: hashFiles('Timetables_EN2.xlsx') != ''
+        run: |
+          python dcu_to_ics.py --xlsx Timetables_EN2.xlsx \
+            --out DCU_Semester1_2026_EN2.ics \
+            --calendar-name "DCU — Semestre 1 2026/27 (Anglais groupe 2)"
+
+      - name: Commit if any feed changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add DCU_Semester1_2026.ics
+          # Glob, not a literal list: matches whichever feeds actually exist
+          # (just the main one today; also EN1/EN2 once those are built), so
+          # this never fails with "pathspec did not match any files".
+          git add DCU_Semester1_2026*.ics
           git diff --cached --quiet || git commit -m "Auto-rebuild: $(date -u +%F)"
           git push

@@ -1,7 +1,17 @@
 # DCU Semester 1 2026/27 — Apple Calendar feed
 
+[![Rebuild status](https://github.com/Gaspard-SOLUS/dcu-calendar/actions/workflows/build.yml/badge.svg)](https://github.com/Gaspard-SOLUS/dcu-calendar/actions/workflows/build.yml)
+
 Built directly from the MyTimetable Excel export, so a refresh is a re-export
 plus one command — no hand-editing of the schedule itself.
+
+`index.html` carries a floating "Signaler une erreur" button and a link in the
+"Si un cours change" section — both `mailto:` to gaspard.solus2@mail.dcu.ie
+with a pre-filled template (module / day+time / what's wrong). It also has a
+"Copier" button next to the feed URL, an emoji favicon, Open Graph/Twitter
+meta tags for a proper preview card when the link is shared in WhatsApp/
+Messages, and a dark theme that follows the OS/browser preference
+automatically (`prefers-color-scheme`, no toggle).
 
 | File | Role |
 |---|---|
@@ -189,3 +199,33 @@ In `dcu_to_ics.py` (or `config.json`/`buildings.json` where noted):
 Worth adding later: a second `URL:` (or a line in the description) pointing at the
 module's Loop page, and a second feed for coursework deadlines subscribed in its
 own colour.
+
+## 7. Two English-group feeds (EN1 / EN2)
+
+Today one export feeds the whole calendar — from a student in English Group 2.
+Group 1 currently has to mentally adjust (see the warning on the landing page).
+This is already prepared end to end for the day you want a feed per group:
+
+1. Get a `Timetables.xlsx` export from someone in Group 1 and someone in
+   Group 2 (each exports their own MyTimetable, same as today). Rename them
+   `Timetables_EN1.xlsx` and `Timetables_EN2.xlsx`, drop them at the repo
+   root next to `Timetables.xlsx`.
+2. `git add -A`, commit, push. The Action already watches both filenames and
+   already has the two build steps — they're no-ops until the files exist,
+   nothing to change in `.github/workflows/build.yml`. It builds
+   `DCU_Semester1_2026_EN1.ics` and `DCU_Semester1_2026_EN2.ics`
+   automatically, each named `DCU — Semestre 1 2026/27 (Anglais groupe N)`
+   via `--calendar-name`.
+3. In `index.html`, the "S'abonner" section has an HTML comment block
+   starting `<!-- Le jour où l'anglais est scindé... -->`. Uncomment it
+   (remove the `<!--`/`-->`), adjust the wording if needed, and delete the
+   "mêmes groupes pour tout le monde" line from the warning box just below —
+   it stops being true.
+4. Decide whether the current generic `Timetables.xlsx` /
+   `DCU_Semester1_2026.ics` should keep existing alongside the two
+   group-specific feeds, or retire. Left as your call — nothing here does it
+   automatically.
+
+Both feeds share `config.json` and `buildings.json` (semester dates,
+closures, buildings — none of that varies by English group), and both go
+through the same `--diff`/DTSTAMP-stability/tests machinery as the main feed.

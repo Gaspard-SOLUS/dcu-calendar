@@ -673,6 +673,10 @@ def main() -> int:
     parser.add_argument("--buildings", type=Path, default=Path("buildings.json"),
                         help="campus building names and coordinates")
     parser.add_argument("--out", type=Path, default=Path("DCU_Semester1_2026.ics"))
+    parser.add_argument("--calendar-name", type=str, default=None,
+                        help="override the calendar's display name (X-WR-CALNAME); "
+                             "useful for building several feeds (e.g. one per group) "
+                             "from the same config.json")
     parser.add_argument("--alarm", type=int, default=15,
                         help="minutes before the event; 0 disables alarms")
     parser.add_argument("--no-key-dates", action="store_true")
@@ -747,7 +751,8 @@ def main() -> int:
             dtstamp, sequence = stamp_for(uid, snapshot, previous, now_stamp)
             body += build_key_date(start, end, title, dtstamp, sequence)
 
-    args.out.write_text(wrap_calendar(body, CALENDAR_NAME, args.ttl),
+    calendar_name = args.calendar_name or CALENDAR_NAME
+    args.out.write_text(wrap_calendar(body, calendar_name, args.ttl),
                          encoding="utf-8", newline="")
 
     # ---- report -----------------------------------------------------------
