@@ -6,7 +6,10 @@ Input   : the .xlsx produced by MyTimetable -> "Multiple weeks" -> EXCEL
           (columns: Module Name, Location, Date, Day, Time range, Weeks, Source)
 Enrich  : overrides.csv — session type, lecturer, notes. Keyed on
           module_code|day|start, so it survives a re-export untouched.
-Output  : an RFC 5545 iCalendar file, Europe/Dublin, stable UIDs.
+Output  : an RFC 5545 iCalendar file, Europe/Dublin, stable UIDs. Each event
+          carries GEO coordinates and a tap-to-open Apple Maps link for its
+          room, and keeps its DTSTAMP/SEQUENCE unchanged run to run unless its
+          content actually changed, so regenerating produces a clean git diff.
 
 The Excel export lists every occurrence with its real date, so no week-number
 arithmetic is involved. WEEK1_MONDAY is used only to label events and to print
@@ -33,6 +36,7 @@ import sys
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 try:
     import pandas as pd
@@ -158,17 +162,18 @@ def parse_room(code: str) -> dict | None:
     }
 
 
-def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
-    """'GLA.SG16, GLA.SG15' -> ('GLA.SG16, GLA.SG15 — Stokes Building, ground floor', lat, lon)
+def describe_rooms(raw: str) -> tuple[str, float | None, float | None, str | None]:
+    """'GLA.SG16, GLA.SG15' -> ('GLA.SG16, GLA.SG15 — Stokes Building, ground floor', lat, lon, building)
 
-    Returns the display string plus the coordinates of the first resolved
-    building, or (raw, None, None) when nothing resolves.
+    Returns the display string, the coordinates of the first resolved
+    building, and that building's name — or (raw, None, None, None) when
+    nothing resolves.
     """
     codes = [c.strip() for c in raw.split(",") if c.strip()]
     parsed = [(c, parse_room(c)) for c in codes]
     resolved = [p for _, p in parsed if p]
     if not resolved:
-        return raw, None, None
+        return raw, None, None, None
 
     # One label per distinct building+floor, in first-seen order.
     labels: list[str] = []
@@ -177,7 +182,7 @@ def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
         if label not in labels:
             labels.append(label)
     display = f"{raw} — {' / '.join(labels)}"
-    return display, resolved[0]["lat"], resolved[0]["lon"]
+    return display, resolved[0]["lat"], resolved[0]["lon"], resolved[0]["building"]
 
 
 def load_config(path: Path) -> list[str]:
@@ -211,6 +216,10 @@ def load_config(path: Path) -> list[str]:
     CALENDAR_NAME = cfg.get("calendar_name", CALENDAR_NAME)
     CALENDAR_DESC = cfg.get("calendar_desc", CALENDAR_DESC)
     TZID = cfg.get("tzid", TZID)
+    if TZID != "Europe/Dublin":
+        notes.append(f"warning: tzid={TZID!r} but the embedded VTIMEZONE block "
+                      f"is hardcoded to Europe/Dublin — event times would be "
+                      f"mislabeled. Edit the VTIMEZONE constant to match.")
     CAMPUS_SUFFIX = cfg.get("campus_suffix", CAMPUS_SUFFIX)
     CAMPUS_LAT = cfg.get("campus_lat", CAMPUS_LAT)
     CAMPUS_LON = cfg.get("campus_lon", CAMPUS_LON)
@@ -243,6 +252,18 @@ def escape(value: str) -> str:
     )
 
 
+def param(value: str) -> str:
+    """Quote an RFC 5545 parameter value (e.g. X-TITLE="...").
+
+    Parameter values have no escaping mechanism: a quoted string may contain
+    anything except a double quote and control characters. So we strip the
+    characters that cannot appear rather than backslash-escaping them, which
+    some parsers read literally and others reject.
+    """
+    cleaned = value.replace('"', "'").replace("\n", " ").replace("\r", " ")
+    return f'"{cleaned}"'
+
+
 def fold(line: str) -> str:
     """Fold a content line to 75 octets; continuations get a leading space."""
     raw = line.encode("utf-8")
@@ -251,7 +272,10 @@ def fold(line: str) -> str:
     chunks, start, limit = [], 0, 75
     while start < len(raw):
         end = min(start + limit, len(raw))
-        while end > start and (raw[end - 1] & 0xC0) == 0x80:  # keep UTF-8 intact
+        # If the byte right after the cut is a UTF-8 continuation byte, the
+        # boundary falls inside a multi-byte character (e.g. the — used in
+        # every room description) — back up to before its lead byte instead.
+        while end > start and end < len(raw) and (raw[end] & 0xC0) == 0x80:
             end -= 1
         chunks.append(raw[start:end].decode("utf-8"))
         start, limit = end, 74
@@ -316,7 +340,7 @@ def load_overrides(path: Path | None) -> dict[tuple[str, str, str], dict]:
     return table
 
 
-def load_sessions(xlsx: Path, overrides: dict) -> list[dict]:
+def load_sessions(xlsx: Path, overrides: dict, used_overrides: set) -> list[dict]:
     frame = pd.read_excel(xlsx)
     missing = [c for c in REQUIRED_COLUMNS if c not in frame.columns]
     if missing:
@@ -328,7 +352,10 @@ def load_sessions(xlsx: Path, overrides: dict) -> list[dict]:
         start, end = parse_time_range(row["Time range"])
         day = datetime.strptime(str(row["Date"]).strip(), "%d/%m/%Y").date()
         rooms = str(row["Location"]).strip()
-        extra = overrides.get((code, str(row["Day"]).strip().lower(), start), {})
+        key = (code, str(row["Day"]).strip().lower(), start)
+        if key in overrides:
+            used_overrides.add(key)
+        extra = overrides.get(key, {})
         sessions.append(
             {
                 "code": code,
@@ -394,15 +421,34 @@ def make_uid(session: dict) -> str:
     return f"{session['date']:%Y%m%d}-{slugify(session['code'])}-{digest}@dcu.timetable"
 
 
-def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
+def hhmm(value: str) -> str:
+    hh, mm = value.split(":")
+    return f"{int(hh):02d}{int(mm):02d}00"
+
+
+def event_fields(session: dict) -> dict:
+    """Compute every RFC 5545 field value for a session.
+
+    Used both to render the VEVENT (build_event) and to detect real content
+    changes across runs (main), so that DTSTAMP/SEQUENCE only move when
+    something a subscriber would notice actually changed.
+    """
     title = f"{session['code']} {session['name']}".strip()
     if session["kind"]:
         title = f"{title} ({session['kind']})"
 
-    described, lat, lon = describe_rooms(session["rooms"])
+    described, lat, lon, building = describe_rooms(session["rooms"])
     location = f"{described}, {CAMPUS_SUFFIX}" if CAMPUS_SUFFIX else described
     lat = CAMPUS_LAT if lat is None else lat
     lon = CAMPUS_LON if lon is None else lon
+
+    # A short, human pin name ("DCU Stokes Extension") plus the campus postal
+    # address, used for the tap-to-open Apple Maps link and the structured
+    # location Apple's Calendar app uses for "Time to Leave" alerts.
+    campus_first_line = next((p.strip() for p in CAMPUS_SUFFIX.split(",") if p.strip()), "")
+    pin_title = f"DCU {building}" if building else (campus_first_line or "DCU Glasnevin Campus")
+    pin_address = "\\n".join(p.strip() for p in CAMPUS_SUFFIX.split(",") if p.strip())
+    maps_url = f"https://maps.apple.com/?ll={lat},{lon}&q={quote(pin_title)}&z=17"
 
     parts = [f"Module: {session['code']} — {session['name']}"]
     if session["kind"]:
@@ -413,35 +459,55 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
     parts.append(f"Teaching week {week_number(session['date'])}")
     if session["notes"]:
         parts.append(session["notes"])
+    parts.append(f"Map: {maps_url}")
 
-    def hhmm(value: str) -> str:
-        hh, mm = value.split(":")
-        return f"{int(hh):02d}{int(mm):02d}00"
+    return {
+        "uid": make_uid(session),
+        "summary": title,
+        "location": location,
+        "description": "\n".join(parts),
+        "dtstart": f"{session['date']:%Y%m%d}T{hhmm(session['start'])}",
+        "dtend": f"{session['date']:%Y%m%d}T{hhmm(session['end'])}",
+        "lat": lat,
+        "lon": lon,
+        "pin_title": pin_title,
+        "pin_address": pin_address,
+        "room_raw": session["rooms"],
+        "maps_url": maps_url,
+    }
+
+
+def build_event(session: dict, dtstamp: str, alarm: int | None, sequence: int = 0) -> list[str]:
+    f = event_fields(session)
 
     lines = [
         "BEGIN:VEVENT",
-        f"UID:{make_uid(session)}",
+        f"UID:{f['uid']}",
         f"DTSTAMP:{dtstamp}",
-        f"DTSTART;TZID={TZID}:{session['date']:%Y%m%d}T{hhmm(session['start'])}",
-        f"DTEND;TZID={TZID}:{session['date']:%Y%m%d}T{hhmm(session['end'])}",
-        f"SUMMARY:{escape(title)}",
-        f"LOCATION:{escape(location)}",
-        f"DESCRIPTION:{escape(chr(10).join(parts))}",
+        f"DTSTART;TZID={TZID}:{f['dtstart']}",
+        f"DTEND;TZID={TZID}:{f['dtend']}",
+        f"SUMMARY:{escape(f['summary'])}",
+        f"LOCATION:{escape(f['location'])}",
+        f"DESCRIPTION:{escape(f['description'])}",
         f"CATEGORIES:{escape(session['code'])}",
         "STATUS:CONFIRMED",
         "TRANSP:OPAQUE",
-        "SEQUENCE:0",
+        f"SEQUENCE:{sequence}",
         (
-            f'X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="{escape(location)}";'
-            f'X-APPLE-RADIUS=100;X-TITLE="{escape(session["rooms"])}":'
-            f"geo:{lat},{lon}"
+            "X-APPLE-STRUCTURED-LOCATION;VALUE=URI"
+            f";X-ADDRESS={param(f['pin_address'])}"
+            ";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1"
+            f";X-TITLE={param(f['pin_title'])}"
+            f":geo:{f['lat']},{f['lon']}"
         ),
+        f"GEO:{f['lat']};{f['lon']}",
+        f"URL;VALUE=URI:{f['maps_url']}",
     ]
     if alarm:
         lines += [
             "BEGIN:VALARM",
             "ACTION:DISPLAY",
-            f"DESCRIPTION:{escape(title)}",
+            f"DESCRIPTION:{escape(f['summary'])}",
             f"TRIGGER:-PT{alarm}M",
             "END:VALARM",
         ]
@@ -449,11 +515,16 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
     return lines
 
 
-def build_key_date(start: date, end_inclusive: date, title: str, dtstamp: str) -> list[str]:
+def key_date_uid(start: date, title: str) -> str:
     digest = hashlib.sha1(title.encode("utf-8")).hexdigest()[:10]
+    return f"{start:%Y%m%d}-key-{digest}@dcu.timetable"
+
+
+def build_key_date(start: date, end_inclusive: date, title: str, dtstamp: str,
+                   sequence: int = 0) -> list[str]:
     return [
         "BEGIN:VEVENT",
-        f"UID:{start:%Y%m%d}-key-{digest}@dcu.timetable",
+        f"UID:{key_date_uid(start, title)}",
         f"DTSTAMP:{dtstamp}",
         f"DTSTART;VALUE=DATE:{start:%Y%m%d}",
         f"DTEND;VALUE=DATE:{end_inclusive + timedelta(days=1):%Y%m%d}",
@@ -461,7 +532,7 @@ def build_key_date(start: date, end_inclusive: date, title: str, dtstamp: str) -
         "DESCRIPTION:Source: DCU Registry\\, Academic Calendar 2026/27.",
         "CATEGORIES:Key dates",
         "TRANSP:TRANSPARENT",
-        "SEQUENCE:0",
+        f"SEQUENCE:{sequence}",
         "END:VEVENT",
     ]
 
@@ -485,24 +556,63 @@ def wrap_calendar(body: list[str], name: str, ttl_hours: int) -> str:
 
 
 # --------------------------------------------------------------------------- #
-# Diff against a previously generated file                                     #
+# Reading a previously generated file (used by --diff and for DTSTAMP/SEQUENCE
+# stability across runs)                                                       #
 # --------------------------------------------------------------------------- #
 
-def read_events(path: Path) -> dict[str, dict]:
+TRACKED_FIELDS = {
+    "UID", "SUMMARY", "LOCATION", "DESCRIPTION", "DTSTART", "DTEND",
+    "DTSTAMP", "SEQUENCE",
+}
+
+
+def read_events_from_lines(lines: list[str]) -> dict[str, dict]:
     events: dict[str, dict] = {}
     current: dict | None = None
-    for line in unfold(path.read_text(encoding="utf-8")):
+    nested = 0  # depth inside a sub-component (VALARM, ...) of the current VEVENT
+    for line in lines:
         if line == "BEGIN:VEVENT":
-            current = {}
-        elif line == "END:VEVENT" and current is not None:
+            current, nested = {}, 0
+            continue
+        if line == "END:VEVENT" and current is not None:
             events[current.get("UID", "")] = current
             current = None
-        elif current is not None:
-            name, _, value = line.partition(":")
-            events_key = name.split(";")[0]
-            if events_key in {"UID", "SUMMARY", "LOCATION", "DTSTART", "DTEND"}:
-                current[events_key] = value
+            continue
+        if current is None:
+            continue
+        # VALARM (etc.) has its own DESCRIPTION — skip its contents entirely so
+        # it can't clobber the VEVENT's own fields of the same name.
+        if line.startswith("BEGIN:"):
+            nested += 1
+            continue
+        if line.startswith("END:"):
+            nested -= 1
+            continue
+        if nested:
+            continue
+        name, _, value = line.partition(":")
+        key = name.split(";")[0]
+        if key in TRACKED_FIELDS:
+            current[key] = value
     return events
+
+
+def read_events(path: Path) -> dict[str, dict]:
+    return read_events_from_lines(unfold(path.read_text(encoding="utf-8")))
+
+
+def stamp_for(uid: str, snapshot: dict[str, str], previous: dict[str, dict],
+              now_stamp: str) -> tuple[str, int]:
+    """DTSTAMP/SEQUENCE for one event, reusing the previous run's values when
+    `snapshot` (the fields a subscriber would notice) is unchanged, so that
+    regenerating the feed without a real timetable change leaves the .ics
+    byte-identical."""
+    old = previous.get(uid)
+    if not old:
+        return now_stamp, 0
+    if all(old.get(k) == v for k, v in snapshot.items()):
+        return old.get("DTSTAMP") or now_stamp, int(old.get("SEQUENCE") or 0)
+    return now_stamp, int(old.get("SEQUENCE") or 0) + 1
 
 
 def print_diff(old: Path, new_body: list[str]) -> None:
@@ -517,7 +627,7 @@ def print_diff(old: Path, new_body: list[str]) -> None:
     changed = [
         uid for uid in set(before) & set(after)
         if any(before[uid].get(f) != after[uid].get(f)
-               for f in ("SUMMARY", "LOCATION", "DTSTART", "DTEND"))
+               for f in ("SUMMARY", "LOCATION", "DTSTART", "DTEND", "DESCRIPTION"))
     ]
 
     if not (added or removed or changed):
@@ -535,24 +645,9 @@ def print_diff(old: Path, new_body: list[str]) -> None:
         for field in ("DTSTART", "DTEND", "LOCATION", "SUMMARY"):
             if b.get(field) != a.get(field):
                 print(f"             {field}: {b.get(field)} -> {a.get(field)}")
+        if b.get("DESCRIPTION") != a.get("DESCRIPTION"):
+            print("             DESCRIPTION: changed (room/lecturer/notes/map link)")
     print(f"diff: {len(added)} added, {len(removed)} removed, {len(changed)} changed")
-
-
-def read_events_from_lines(lines: list[str]) -> dict[str, dict]:
-    events: dict[str, dict] = {}
-    current: dict | None = None
-    for line in lines:
-        if line == "BEGIN:VEVENT":
-            current = {}
-        elif line == "END:VEVENT" and current is not None:
-            events[current.get("UID", "")] = current
-            current = None
-        elif current is not None:
-            name, _, value = line.partition(":")
-            key = name.split(";")[0]
-            if key in {"UID", "SUMMARY", "LOCATION", "DTSTART", "DTEND"}:
-                current[key] = value
-    return events
 
 
 # --------------------------------------------------------------------------- #
@@ -560,6 +655,14 @@ def read_events_from_lines(lines: list[str]) -> dict[str, dict]:
 # --------------------------------------------------------------------------- #
 
 def main() -> int:
+    # Windows consoles often default to a non-UTF-8 code page, which mangles
+    # the em dashes in the run report. Best-effort; never fatal.
+    if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
+
     parser = argparse.ArgumentParser(
         description="Build an Apple Calendar .ics from a DCU MyTimetable Excel export"
     )
@@ -588,7 +691,9 @@ def main() -> int:
 
     config_notes = load_config(args.config) + load_buildings(args.buildings)
 
-    sessions = load_sessions(args.xlsx, load_overrides(args.overrides))
+    overrides = load_overrides(args.overrides)
+    used_overrides: set = set()
+    sessions = load_sessions(args.xlsx, overrides, used_overrides)
     if args.merge_adjacent:
         sessions = merge_adjacent(sessions)
 
@@ -599,20 +704,51 @@ def main() -> int:
         else:
             kept.append(session)
 
-    dtstamp = stamp_utc()
     alarm = args.alarm if args.alarm > 0 else None
-    body: list[str] = []
-    for session in kept:
-        body += build_event(session, dtstamp, alarm)
-    if not args.no_key_dates:
-        for start, end, title in KEY_DATES:
-            body += build_key_date(start, end, title, dtstamp)
 
     if args.diff:
+        stamp = stamp_utc()
+        body: list[str] = []
+        for session in kept:
+            body += build_event(session, stamp, alarm)
+        if not args.no_key_dates:
+            for start, end, title in KEY_DATES:
+                body += build_key_date(start, end, title, stamp)
         print_diff(args.diff, body)
         return 0
 
-    args.out.write_text(wrap_calendar(body, CALENDAR_NAME, args.ttl), encoding="utf-8")
+    # DTSTAMP/SEQUENCE stability: reuse the previous run's values for any event
+    # whose visible content (time, room, title, description) hasn't changed,
+    # so `git diff` on the .ics only ever shows real timetable changes.
+    previous = read_events(args.out) if args.out.exists() else {}
+    now_stamp = stamp_utc()
+
+    body: list[str] = []
+    for session in kept:
+        f = event_fields(session)
+        snapshot = {
+            "SUMMARY": escape(f["summary"]),
+            "LOCATION": escape(f["location"]),
+            "DESCRIPTION": escape(f["description"]),
+            "DTSTART": f["dtstart"],
+            "DTEND": f["dtend"],
+        }
+        dtstamp, sequence = stamp_for(f["uid"], snapshot, previous, now_stamp)
+        session["_dtstamp"], session["_sequence"] = dtstamp, sequence
+        body += build_event(session, dtstamp, alarm, sequence)
+    if not args.no_key_dates:
+        for start, end, title in KEY_DATES:
+            uid = key_date_uid(start, title)
+            snapshot = {
+                "SUMMARY": escape(title),
+                "DTSTART": f"{start:%Y%m%d}",
+                "DTEND": f"{end + timedelta(days=1):%Y%m%d}",
+            }
+            dtstamp, sequence = stamp_for(uid, snapshot, previous, now_stamp)
+            body += build_key_date(start, end, title, dtstamp, sequence)
+
+    args.out.write_text(wrap_calendar(body, CALENDAR_NAME, args.ttl),
+                         encoding="utf-8", newline="")
 
     # ---- report -----------------------------------------------------------
     per_module: dict[str, int] = defaultdict(int)
@@ -626,9 +762,12 @@ def main() -> int:
         print(f"  {note}")
     for code in sorted(per_module):
         print(f"  {code:<9} {per_module[code]:>3}")
-    span = f"weeks {min(per_week)}–{max(per_week)}" if per_week else "no weeks"
-    print(f"  coverage: {span}, "
-          f"{min(per_week.values())}–{max(per_week.values())} sessions per week")
+    if per_week:
+        span = f"weeks {min(per_week)}–{max(per_week)}"
+        print(f"  coverage: {span}, "
+              f"{min(per_week.values())}–{max(per_week.values())} sessions per week")
+    else:
+        print("  coverage: no sessions in output")
     for session in dropped:
         reason = CLOSURES[session["date"]]
         print(f"  dropped  {session['date']:%d/%m} {session['start']} "
@@ -655,14 +794,21 @@ def main() -> int:
         print(f"  no session type set for {len(missing)} activities: "
               + ", ".join(missing))
 
+    unused = sorted(set(overrides) - used_overrides)
+    if unused:
+        print(f"  overrides.csv: {len(unused)} row(s) never matched a session "
+              f"(stale after a re-export?): "
+              + ", ".join(f"{code} {day} {start}" for code, day, start in unused))
+
     if args.split:
         by_code: dict[str, list[str]] = defaultdict(list)
         for session in kept:
-            by_code[session["code"]] += build_event(session, dtstamp, alarm)
+            by_code[session["code"]] += build_event(
+                session, session["_dtstamp"], alarm, session["_sequence"])
         for code, lines in sorted(by_code.items()):
             path = args.out.with_name(f"{args.out.stem}_{code}{args.out.suffix}")
             path.write_text(wrap_calendar(lines, f"DCU {code}", args.ttl),
-                            encoding="utf-8")
+                            encoding="utf-8", newline="")
             print(f"{path}: {per_module[code]} events")
 
     return 0

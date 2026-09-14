@@ -1,0 +1,11 @@
+# The generator writes exact \r\n line endings itself (RFC 5545 requires
+# CRLF). Never let Git's autocrlf touch the .ics — on Windows it doubled every
+# line ending to \r\r\n, corrupting the published feed and breaking --diff.
+*.ics -text
+
+# Keep the generator's own line endings stable across OSes for clean diffs.
+*.py text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.md text eol=lf

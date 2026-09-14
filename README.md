@@ -7,8 +7,12 @@ plus one command — no hand-editing of the schedule itself.
 |---|---|
 | `Timetables.xlsx` | The MyTimetable export. Replace it wholesale on every refresh. |
 | `overrides.csv` | Your enrichment layer: session type, lecturer, notes. Survives re-exports. |
+| `config.json` | Semester dates, closures, key dates, campus address. |
+| `buildings.json` | Campus building names and per-building GPS coordinates. |
 | `dcu_to_ics.py` | Generator. Needs `pandas` + `openpyxl`. |
 | `DCU_Semester1_2026.ics` | Output: 132 class events + 5 all-day academic key dates. |
+| `tests/` | `pytest` unit tests for the parsing/escaping/UID logic. |
+| `.github/workflows/build.yml` | Rebuilds and commits the feed automatically on push. |
 
 ```
 EEG1011  37    EEN1018  25    EEN1022  47    EEN1083  12    ESL1009  11
@@ -60,7 +64,7 @@ is where you add more.
 ## 3. Commands
 
 ```bash
-pip install pandas openpyxl          # once
+pip install -r requirements.txt                         # once (pandas + openpyxl)
 
 python3 dcu_to_ics.py                                   # default build
 python3 dcu_to_ics.py --alarm 25                        # 25-minute reminder
@@ -73,8 +77,27 @@ python3 dcu_to_ics.py --ttl 2                           # suggest a 2-hour refre
 python3 dcu_to_ics.py --diff DCU_Semester1_2026.ics     # dry run: what would change
 ```
 
+Regenerating with unchanged inputs produces a byte-identical file: each event
+keeps its `DTSTAMP`/`SEQUENCE` from the last run unless its time, room, title
+or description actually changed, so `git diff` on the `.ics` only ever shows
+real timetable changes, never rebuild noise. This relies on the `.ics` keeping
+the exact `\r\n` line endings the generator writes — `.gitattributes` marks
+`*.ics -text` so Git (notably on Windows, where `core.autocrlf` would otherwise
+double every line ending to `\r\r\n` and corrupt the feed) never touches them.
+
 `--split` matters if you want colours: Apple assigns one colour per calendar,
 never per event. Five files, five subscriptions, five colours.
+
+### Tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest -q
+```
+
+Covers escaping/line-folding (including UTF-8 characters like the — in every
+room description), room-code parsing, UID stability, and the DTSTAMP/SEQUENCE
+stability logic above.
 
 ## 4. Weekly refresh
 
@@ -93,8 +116,17 @@ git add -A && git commit -m "Timetable refresh $(date +%F)" && git push
 `--diff` prints added / removed / changed sessions with the old and new values.
 Run it before every rebuild — it is the only thing that tells you a room moved.
 
-UIDs are `date + module + weekday + start + type`, so an edited session updates in
-place instead of duplicating, and a cancelled one disappears from the feed.
+Steps 2–3 also run automatically: `.github/workflows/build.yml` rebuilds and
+commits the feed on every push that touches `Timetables.xlsx`, `overrides.csv`,
+`config.json` or `buildings.json`. So the manual commands above are for
+previewing the diff locally before you push — pushing alone is enough to
+publish.
+
+UIDs are `date + module code + weekday + start time` (SHA-1 digest of that
+fingerprint). Room, session type, lecturer and notes are deliberately left out
+of the fingerprint, so editing any of those updates the event in place instead
+of deleting and recreating it — and a session dropped from a re-export simply
+disappears from the feed rather than lingering.
 
 ## 5. Publishing and subscribing
 
@@ -134,13 +166,18 @@ obscure rather than protected: anyone with the link can read your schedule.
 
 ## 6. Customisation points
 
-In `dcu_to_ics.py`:
+In `dcu_to_ics.py` (or `config.json`/`buildings.json` where noted):
 
-- `CAMPUS_SUFFIX`, `CAMPUS_LAT`, `CAMPUS_LON` — the room code stays first in
-  `LOCATION`; the campus address is appended so Apple Maps can geocode the event
-  and offer "Time to Leave". Set `CAMPUS_SUFFIX = ""` for room codes only.
-- `X-APPLE-STRUCTURED-LOCATION` — the coordinate that actually drives travel-time
-  alerts. Per-building coordinates would be more precise than the campus centroid.
+- `CAMPUS_SUFFIX`, `CAMPUS_LAT`, `CAMPUS_LON` (`config.json`) — the room code stays
+  first in `LOCATION`; the campus address is appended so Apple Maps can geocode the
+  event and offer "Time to Leave". Set `campus_suffix` to `""` for room codes only.
+- `buildings.json` — per-building GPS coordinates. Every event carries the
+  coordinates of its own building (falling back to the campus centre only when a
+  room code isn't in the file), used for:
+  - `X-APPLE-STRUCTURED-LOCATION` — drives Apple Calendar's "Time to Leave" alerts.
+  - `GEO` — the standard RFC 5545 property, for any client that reads it.
+  - `URL` + a `Map:` line in the description — a direct
+    `https://maps.apple.com/...` link to the building, one tap from the event.
 - `VALARM` — one display alert at `--alarm` minutes. A second block per event gives
   two-stage reminders.
 - `CATEGORIES` — set to the module code; searchable and filterable.
@@ -149,5 +186,6 @@ In `dcu_to_ics.py`:
 - `WEEK1_MONDAY` — only labels events ("Teaching week 7") and drives the coverage
   report; it no longer affects scheduling.
 
-Worth adding later: a `URL:` property per event pointing at the module's Loop page,
-and a second feed for coursework deadlines subscribed in its own colour.
+Worth adding later: a second `URL:` (or a line in the description) pointing at the
+module's Loop page, and a second feed for coursework deadlines subscribed in its
+own colour.

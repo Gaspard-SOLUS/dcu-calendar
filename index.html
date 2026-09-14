@@ -46,12 +46,17 @@
   a { color: var(--accent); }
   footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
            color: var(--muted); font-size: .85rem; }
+  .updated { display: inline-flex; align-items: center; gap: .5em;
+             font-size: .84rem; color: var(--muted); margin: -.8rem 0 1.8rem; }
+  .updated::before { content: ""; width: 7px; height: 7px; border-radius: 50%;
+                      background: var(--accent); flex: none; }
 </style>
 </head>
 <body>
 
 <h1>Emploi du temps DCU — Semestre 1 2026/27</h1>
 <p class="sub">Tous nos cours dans l'app Calendrier, mis à jour automatiquement.</p>
+<p class="updated" id="last-updated" hidden></p>
 
 <p>MyTimetable ne propose aucun export calendrier : DCU a retiré l'option d'abonnement,
 faute de pouvoir garantir qu'un calendrier abonné reste à jour. Ce flux comble le trou.
@@ -91,11 +96,11 @@ cette adresse :</p>
 deux abonnements donnent tous les cours en double.</p>
 
 <div class="warn">
-  <strong>Vérifie tes groupes avant de t'y fier.</strong>
-  Ce flux correspond à notre sélection de modules et aux groupes qui vont avec —
-  notamment <code>ESL1009</code> groupe 02 et le groupe de TP <code>EEN1022</code>.
-  Si tu n'es pas dans les mêmes groupes, certains créneaux seront faux. Compare une
-  semaine avec MyTimetable avant de ranger le téléphone.
+  <strong>Un doute ? Vérifie sur MyTimetable.</strong>
+  Ce flux correspond à l'emploi du temps de toute la promo — mêmes modules,
+  mêmes groupes pour tout le monde SAUF POUR ANGLAIS (c'est au groupe 1 de s'adapter). S'il y a un écart entre le moment où DCU
+  change un créneau côté MyTimetable et celui où je republie le flux, compare
+  une semaine avec MyTimetable avant de ranger le téléphone.
 </div>
 
 <h2>Ce que tu obtiens</h2>
@@ -107,6 +112,9 @@ deux abonnements donnent tous les cours en double.</p>
   <li><strong>Les coordonnées GPS du bon bâtiment</strong>, pas du centre du campus :
       « Heure de départ » calcule le trajet jusqu'à Polaris ou Henry Grattan
       séparément.</li>
+  <li><strong>Un lien Plans direct dans chaque cours</strong> : le lieu de l'événement
+      pointe vers Apple Maps, centré sur le bon bâtiment — un tap et l'itinéraire
+      démarre, sans retaper l'adresse.</li>
   <li><strong>Les exceptions déjà traitées</strong> : pas de cours le lundi 26 octobre
       (férié, université fermée), pas d'anglais en semaine 7, TP EEN1018 en semaines
       paires uniquement, changements de salle en semaines 2 et 12.</li>
@@ -154,6 +162,39 @@ supprimées. Puis <em>Multiple weeks</em>, semaines 1 à 12, <em>EXCEL</em>.</p>
   Non officiel, sans lien avec DCU. Noms de bâtiments et codes salles issus du plan du
   campus DCU ; dates universitaires du calendrier du Registry.
 </footer>
+
+<script>
+// Lit le .ics publié à côté de cette page et affiche la date du dernier
+// changement réel (le plus récent DTSTAMP parmi les événements — pas l'heure
+// du dernier passage du script, puisque dcu_to_ics.py ne touche au DTSTAMP
+// d'un événement que si son contenu a changé). Échoue silencieusement si le
+// fichier n'est pas accessible (ouverture locale, réseau coupé) : le bandeau
+// reste simplement masqué.
+(async () => {
+  try {
+    const res = await fetch("DCU_Semester1_2026.ics", { cache: "no-store" });
+    if (!res.ok) return;
+    const text = await res.text();
+    const stamps = [...text.matchAll(/DTSTAMP:(\d{8})T(\d{6})Z/g)].map(m => m[0]);
+    if (!stamps.length) return;
+    const latest = stamps.reduce((a, b) => (b > a ? b : a));
+    const [, ymd, hms] = latest.match(/DTSTAMP:(\d{8})T(\d{6})Z/);
+    const stamp = new Date(Date.UTC(
+      +ymd.slice(0, 4), +ymd.slice(4, 6) - 1, +ymd.slice(6, 8),
+      +hms.slice(0, 2), +hms.slice(2, 4)
+    ));
+    const fmt = new Intl.DateTimeFormat("fr-FR", {
+      day: "numeric", month: "long", hour: "2-digit", minute: "2-digit",
+      timeZone: "Europe/Dublin",
+    });
+    const el = document.getElementById("last-updated");
+    el.textContent = "Dernière mise à jour : " + fmt.format(stamp);
+    el.hidden = false;
+  } catch (e) {
+    // pas de bandeau plutôt qu'une page cassée
+  }
+})();
+</script>
 
 </body>
 </html>

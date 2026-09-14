@@ -14,3 +14,8 @@ git add -A
 git status
 git commit -m "Timetable refresh $(date +%F)"
 git push
+
+# Note : depuis l'ajout de .github/workflows/build.yml, un simple
+# `git add Timetables.xlsx && git commit ... && git push` suffit — l'Action
+# regénère et commit DCU_Semester1_2026.ics toute seule. Les étapes 2-4
+# ci-dessus restent utiles pour voir le diff en local avant de pousser.
