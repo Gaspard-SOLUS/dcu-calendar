@@ -164,34 +164,61 @@ supprimées. Puis <em>Multiple weeks</em>, semaines 1 à 12, <em>EXCEL</em>.</p>
 </footer>
 
 <script>
-// Lit le .ics publié à côté de cette page et affiche la date du dernier
-// changement réel (le plus récent DTSTAMP parmi les événements — pas l'heure
-// du dernier passage du script, puisque dcu_to_ics.py ne touche au DTSTAMP
-// d'un événement que si son contenu a changé). Échoue silencieusement si le
-// fichier n'est pas accessible (ouverture locale, réseau coupé) : le bandeau
-// reste simplement masqué.
+// Deux dates, deux sources :
+// - "Vérifié le" vient de l'historique des runs de l'Action GitHub (API
+//   publique, pas de token nécessaire) : c'est la dernière fois que le flux
+//   a été régénéré et contrôlé, que le contenu ait changé ou non.
+// - "Dernier changement" vient du .ics lui-même (le DTSTAMP le plus récent
+//   parmi les événements) : la dernière fois qu'un cours a réellement bougé,
+//   puisque dcu_to_ics.py ne touche au DTSTAMP d'un événement que si son
+//   contenu a changé.
+// Chaque source échoue indépendamment et silencieusement (réseau coupé,
+// ouverture en local, quota API) : le bandeau affiche ce qu'il a pu obtenir,
+// ou reste masqué si rien n'a marché.
 (async () => {
+  const fmt = new Intl.DateTimeFormat("fr-FR", {
+    day: "numeric", month: "long", hour: "2-digit", minute: "2-digit",
+    timeZone: "Europe/Dublin",
+  });
+
+  let changedText = null;
   try {
     const res = await fetch("DCU_Semester1_2026.ics", { cache: "no-store" });
-    if (!res.ok) return;
-    const text = await res.text();
-    const stamps = [...text.matchAll(/DTSTAMP:(\d{8})T(\d{6})Z/g)].map(m => m[0]);
-    if (!stamps.length) return;
-    const latest = stamps.reduce((a, b) => (b > a ? b : a));
-    const [, ymd, hms] = latest.match(/DTSTAMP:(\d{8})T(\d{6})Z/);
-    const stamp = new Date(Date.UTC(
-      +ymd.slice(0, 4), +ymd.slice(4, 6) - 1, +ymd.slice(6, 8),
-      +hms.slice(0, 2), +hms.slice(2, 4)
-    ));
-    const fmt = new Intl.DateTimeFormat("fr-FR", {
-      day: "numeric", month: "long", hour: "2-digit", minute: "2-digit",
-      timeZone: "Europe/Dublin",
-    });
+    if (res.ok) {
+      const text = await res.text();
+      const stamps = [...text.matchAll(/DTSTAMP:\d{8}T\d{6}Z/g)].map(m => m[0]);
+      if (stamps.length) {
+        const [, ymd, hms] = stamps.reduce((a, b) => (b > a ? b : a))
+          .match(/DTSTAMP:(\d{8})T(\d{6})Z/);
+        changedText = fmt.format(new Date(Date.UTC(
+          +ymd.slice(0, 4), +ymd.slice(4, 6) - 1, +ymd.slice(6, 8),
+          +hms.slice(0, 2), +hms.slice(2, 4)
+        )));
+      }
+    }
+  } catch (e) { /* pas de date de changement, tant pis */ }
+
+  let checkedText = null;
+  try {
+    const res = await fetch(
+      "https://api.github.com/repos/Gaspard-SOLUS/dcu-calendar/actions/workflows/build.yml/runs?status=success&per_page=1"
+    );
+    if (res.ok) {
+      const data = await res.json();
+      const run = data.workflow_runs && data.workflow_runs[0];
+      if (run) checkedText = fmt.format(new Date(run.updated_at));
+    }
+  } catch (e) { /* pas de date de vérification, tant pis */ }
+
+  const bits = [];
+  if (checkedText) bits.push(`Vérifié le ${checkedText}`);
+  if (changedText) {
+    bits.push(`${bits.length ? "dernier" : "Dernier"} changement : ${changedText}`);
+  }
+  if (bits.length) {
     const el = document.getElementById("last-updated");
-    el.textContent = "Dernière mise à jour : " + fmt.format(stamp);
+    el.textContent = bits.join(" · ");
     el.hidden = false;
-  } catch (e) {
-    // pas de bandeau plutôt qu'une page cassée
   }
 })();
 </script>
