@@ -90,6 +90,21 @@
   }
   .copy-btn:hover { background: var(--code-bg); }
   .copy-btn.copied { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .vote-float {
+    position: fixed; left: 1rem; bottom: 1rem; z-index: 10;
+    display: inline-flex; align-items: center; gap: .5em;
+    background: var(--chip-bg); color: var(--chip-fg);
+    padding: .55rem .8rem; border-radius: 999px; font-size: .85rem;
+    font-weight: 600; box-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+  .vote-mini {
+    border: none; background: rgba(255,255,255,.14); color: inherit;
+    width: 1.9em; height: 1.9em; border-radius: 50%; cursor: pointer;
+    font-size: 1em; line-height: 1; display: inline-flex; align-items: center;
+    justify-content: center; flex: none;
+  }
+  .vote-mini:hover:not(:disabled) { background: rgba(255,255,255,.3); }
+  .vote-mini:disabled { opacity: .5; cursor: default; }
 </style>
 </head>
 <body>
@@ -97,6 +112,12 @@
 <a class="report"
    href="mailto:gaspard.solus2@mail.dcu.ie?subject=Erreur%20emploi%20du%20temps%20DCU&body=Module%20%3A%20%0AJour%20et%20horaire%20%3A%20%0ACe%20qui%20ne%20va%20pas%20%3A%20%0A"
    title="Signaler une erreur par email">🐛 Signaler une erreur</a>
+
+<div class="vote-float" id="vote-float" title="Anonyme, ça m'aide à savoir si ça vaut le coup de continuer.">
+  <span id="vote-label">Utile ?</span>
+  <button class="vote-mini" id="vote-yes" type="button" aria-label="Utile">👍</button>
+  <button class="vote-mini" id="vote-no" type="button" aria-label="Pas utile">👎</button>
+</div>
 
 <h1>Emploi du temps DCU — Semestre 1 2026/27</h1>
 <p class="sub">Tous nos cours dans l'app Calendrier, mis à jour automatiquement.</p>
@@ -230,6 +251,57 @@ supprimées. Puis <em>Multiple weeks</em>, semaines 1 à 12, <em>EXCEL</em>.</p>
 </footer>
 
 <script>
+// Bouton utile / pas utile — un compteur "en dur" n'existe pas sur un site
+// statique (pas de serveur), donc chaque clic incrémente un compteur public
+// gratuit (abacus.jasoncameron.dev). Dédup par navigateur (localStorage),
+// pas par IP : sur le wifi campus, tout le monde partage probablement la
+// même IP publique, une vraie dédup IP bloquerait la classe entière après le
+// premier vote. Contournable en vidant le stockage local — acceptable pour
+// un sondage de confort, pas un vote sensible.
+//
+// gaspard : pour lire les totaux sans les fausser (ne PAS ouvrir /hit/, ça
+// incrémente) :
+//   https://abacus.jasoncameron.dev/info/dcu-calendar-gaspard-solus/useful
+//   https://abacus.jasoncameron.dev/info/dcu-calendar-gaspard-solus/not-useful
+(() => {
+  const NAMESPACE = "dcu-calendar-gaspard-solus";
+  const STORAGE_KEY = "dcu-vote";
+  const wrap = document.getElementById("vote-float");
+  const label = document.getElementById("vote-label");
+  const yesBtn = document.getElementById("vote-yes");
+  const noBtn = document.getElementById("vote-no");
+
+  // Déjà voté lors d'une visite précédente (même navigateur) : rien à
+  // montrer, la pastille flottante disparaît complètement.
+  if (localStorage.getItem(STORAGE_KEY)) {
+    wrap.hidden = true;
+    return;
+  }
+
+  async function vote(choice) {
+    yesBtn.disabled = true;
+    noBtn.disabled = true;
+    label.textContent = "Envoi…";
+    try {
+      const res = await fetch(`https://abacus.jasoncameron.dev/hit/${NAMESPACE}/${choice}`);
+      if (!res.ok) throw new Error("hit failed");
+      localStorage.setItem(STORAGE_KEY, choice);
+      label.textContent = "Merci ! 🙏";
+      yesBtn.hidden = true;
+      noBtn.hidden = true;
+      setTimeout(() => { wrap.hidden = true; }, 2500);
+    } catch (e) {
+      // Pas de localStorage posé : un rechargement permet de réessayer.
+      label.textContent = "Utile ?";
+      yesBtn.disabled = false;
+      noBtn.disabled = false;
+    }
+  }
+
+  yesBtn.addEventListener("click", () => vote("useful"));
+  noBtn.addEventListener("click", () => vote("not-useful"));
+})();
+
 // Bouton "Copier" à côté de l'URL du flux — évite la sélection manuelle,
 // surtout pénible sur mobile. navigator.clipboard needs un contexte
 // sécurisé (https, déjà le cas sur GitHub Pages) ; repli sur execCommand
