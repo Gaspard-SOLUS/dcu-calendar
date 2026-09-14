@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 NAME:DCU — Semester 1 2026/27
 X-WR-CALNAME:DCU — Semester 1 2026/27
-X-WR-CALDESC:DCU Glasnevin — Semester 1 2026/27.
+X-WR-CALDESC:DCU Glasnevin — teaching timetable.
 X-WR-TIMEZONE:Europe/Dublin
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
@@ -29,21 +29,21 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:20260907-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260907T090000
 DTEND;TZID=Europe/Dublin:20260907T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 1
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 1
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -52,21 +52,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260907-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260907T140000
 DTEND;TZID=Europe/Dublin:20260907T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 1
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 1
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -75,21 +76,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260908-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260908T110000
 DTEND;TZID=Europe/Dublin:20260908T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 1
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 1
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -98,21 +99,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260908-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260908T140000
 DTEND;TZID=Europe/Dublin:20260908T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 1
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 1
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -121,21 +122,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260909-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260909T120000
 DTEND;TZID=Europe/Dublin:20260909T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.QG15\nTeaching week 1
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  1
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -144,21 +146,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260909-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260909T140000
 DTEND;TZID=Europe/Dublin:20260909T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 1
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 1
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -167,21 +169,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260909-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260909T150000
 DTEND;TZID=Europe/Dublin:20260909T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 1
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 1
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -190,21 +192,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260910-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260910T100000
 DTEND;TZID=Europe/Dublin:20260910T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 1\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 1\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -213,21 +216,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260910-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260910T170000
 DTEND;TZID=Europe/Dublin:20260910T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 1
+ .QG15 — DCU Business School\, ground floor\nTeaching week 1
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -236,21 +239,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260914-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260914T090000
 DTEND;TZID=Europe/Dublin:20260914T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 2
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 2
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -259,21 +262,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260914-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260914T100000
 DTEND;TZID=Europe/Dublin:20260914T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 2
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 2
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -282,21 +285,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260914-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260914T140000
 DTEND;TZID=Europe/Dublin:20260914T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 2
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 2
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -305,21 +309,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260915-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260915T110000
 DTEND;TZID=Europe/Dublin:20260915T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 2
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 2
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -328,21 +332,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260915-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260915T140000
 DTEND;TZID=Europe/Dublin:20260915T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.SA105\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA105 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.SA105\nTeaching week 2
+  GLA.SA105 — Stokes Extension\, 1st floor\nTeaching week 2
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA105\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA105":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA105 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA105":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -351,21 +355,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260916T100000
 DTEND;TZID=Europe/Dublin:20260916T120000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
-LOCATION:GLA.SG15\, GLA.SG16\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16\nTeaching week 2\nEven weeks only: 2 4 6 8
+ al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
+  week 2\nEven weeks only: 2 4 6 8
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
@@ -374,21 +379,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260916T120000
 DTEND;TZID=Europe/Dublin:20260916T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.QG15\nTeaching week 2
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  2
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -397,21 +403,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260916T140000
 DTEND;TZID=Europe/Dublin:20260916T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 2
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 2
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -420,21 +426,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260916T150000
 DTEND;TZID=Europe/Dublin:20260916T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 2
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 2
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -443,21 +449,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260916T170000
 DTEND;TZID=Europe/Dublin:20260916T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 2
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 2
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -466,21 +472,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260917-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260917T100000
 DTEND;TZID=Europe/Dublin:20260917T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 2\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 2\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -489,21 +496,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260917-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260917T170000
 DTEND;TZID=Europe/Dublin:20260917T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 2
+ .QG15 — DCU Business School\, ground floor\nTeaching week 2
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -512,21 +519,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260921-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260921T090000
 DTEND;TZID=Europe/Dublin:20260921T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 3
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 3
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -535,21 +542,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260921-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260921T100000
 DTEND;TZID=Europe/Dublin:20260921T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 3
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 3
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -558,21 +565,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260921-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260921T140000
 DTEND;TZID=Europe/Dublin:20260921T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 3
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 3
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -581,21 +589,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260922-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260922T110000
 DTEND;TZID=Europe/Dublin:20260922T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 3
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 3
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -604,21 +612,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260922-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260922T140000
 DTEND;TZID=Europe/Dublin:20260922T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 3
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 3
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -627,21 +635,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260923-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260923T120000
 DTEND;TZID=Europe/Dublin:20260923T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.QG15\nTeaching week 3
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  3
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -650,21 +659,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260923-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260923T140000
 DTEND;TZID=Europe/Dublin:20260923T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 3
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 3
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -673,21 +682,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260923-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260923T150000
 DTEND;TZID=Europe/Dublin:20260923T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 3
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 3
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -696,21 +705,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260923-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260923T170000
 DTEND;TZID=Europe/Dublin:20260923T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 3
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 3
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -719,21 +728,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260924-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260924T100000
 DTEND;TZID=Europe/Dublin:20260924T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 3\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 3\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -742,21 +752,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260924-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260924T170000
 DTEND;TZID=Europe/Dublin:20260924T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 3
+ .QG15 — DCU Business School\, ground floor\nTeaching week 3
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -765,21 +775,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260928-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260928T090000
 DTEND;TZID=Europe/Dublin:20260928T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 4
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 4
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -788,21 +798,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260928-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260928T100000
 DTEND;TZID=Europe/Dublin:20260928T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 4
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 4
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -811,21 +821,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260928-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260928T140000
 DTEND;TZID=Europe/Dublin:20260928T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 4
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 4
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -834,21 +845,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260929-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260929T110000
 DTEND;TZID=Europe/Dublin:20260929T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 4
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 4
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -857,21 +868,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260929-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260929T140000
 DTEND;TZID=Europe/Dublin:20260929T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 4
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 4
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -880,21 +891,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260930T100000
 DTEND;TZID=Europe/Dublin:20260930T120000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
-LOCATION:GLA.SG15\, GLA.SG16\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16\nTeaching week 4\nEven weeks only: 2 4 6 8
+ al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
+  week 4\nEven weeks only: 2 4 6 8
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
@@ -903,21 +915,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260930T120000
 DTEND;TZID=Europe/Dublin:20260930T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 4
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 4
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -926,21 +938,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260930T140000
 DTEND;TZID=Europe/Dublin:20260930T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 4
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 4
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -949,21 +961,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260930T150000
 DTEND;TZID=Europe/Dublin:20260930T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 4
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 4
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -972,21 +984,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20260930T170000
 DTEND;TZID=Europe/Dublin:20260930T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 4
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 4
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -995,21 +1007,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261001-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261001T100000
 DTEND;TZID=Europe/Dublin:20261001T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 4\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 4\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -1018,21 +1031,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261001-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261001T170000
 DTEND;TZID=Europe/Dublin:20261001T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 4
+ .QG15 — DCU Business School\, ground floor\nTeaching week 4
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -1041,21 +1054,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261005-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261005T090000
 DTEND;TZID=Europe/Dublin:20261005T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 5
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 5
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1064,21 +1077,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261005-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261005T100000
 DTEND;TZID=Europe/Dublin:20261005T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 5
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 5
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -1087,21 +1100,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261005-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261005T140000
 DTEND;TZID=Europe/Dublin:20261005T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 5
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 5
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -1110,21 +1124,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261006-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261006T110000
 DTEND;TZID=Europe/Dublin:20261006T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 5
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 5
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1133,21 +1147,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261006-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261006T140000
 DTEND;TZID=Europe/Dublin:20261006T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 5
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 5
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -1156,21 +1170,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261007-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261007T120000
 DTEND;TZID=Europe/Dublin:20261007T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 5
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 5
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1179,21 +1193,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261007-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261007T140000
 DTEND;TZID=Europe/Dublin:20261007T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 5
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 5
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1202,21 +1216,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261007-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261007T150000
 DTEND;TZID=Europe/Dublin:20261007T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 5
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 5
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -1225,21 +1239,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261007-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261007T170000
 DTEND;TZID=Europe/Dublin:20261007T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 5
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 5
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -1248,21 +1262,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261008-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261008T100000
 DTEND;TZID=Europe/Dublin:20261008T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 5\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 5\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -1271,21 +1286,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261008-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261008T170000
 DTEND;TZID=Europe/Dublin:20261008T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 5
+ .QG15 — DCU Business School\, ground floor\nTeaching week 5
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -1294,21 +1309,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261012-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261012T090000
 DTEND;TZID=Europe/Dublin:20261012T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 6
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 6
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1317,21 +1332,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261012-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261012T100000
 DTEND;TZID=Europe/Dublin:20261012T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 6
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 6
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -1340,21 +1355,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261012-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261012T140000
 DTEND;TZID=Europe/Dublin:20261012T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 6
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 6
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -1363,21 +1379,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261013-EEG1011-13772ab47b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261013T100000
 DTEND;TZID=Europe/Dublin:20261013T110000
 SUMMARY:EEG1011 Engineering Mathematics IV
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
-DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nRoom: GLA.S144\
- nTeaching week 6\nOne-off session in week 6
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
+DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nRoom: GLA.S144 
+ — Stokes Building\, 1st floor\nTeaching week 6\nOne-off session in week 
+ 6
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV
@@ -1386,21 +1403,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261013-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261013T110000
 DTEND;TZID=Europe/Dublin:20261013T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 6
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 6
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1409,21 +1426,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261013-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261013T140000
 DTEND;TZID=Europe/Dublin:20261013T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 6
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 6
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -1432,21 +1449,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261014T100000
 DTEND;TZID=Europe/Dublin:20261014T120000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
-LOCATION:GLA.SG15\, GLA.SG16\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16\nTeaching week 6\nEven weeks only: 2 4 6 8
+ al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
+  week 6\nEven weeks only: 2 4 6 8
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
@@ -1455,21 +1473,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261014T120000
 DTEND;TZID=Europe/Dublin:20261014T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 6
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 6
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1478,21 +1496,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261014T140000
 DTEND;TZID=Europe/Dublin:20261014T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 6
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 6
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1501,21 +1519,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261014T150000
 DTEND;TZID=Europe/Dublin:20261014T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 6
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 6
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -1524,21 +1542,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261014T170000
 DTEND;TZID=Europe/Dublin:20261014T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 6
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 6
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -1547,21 +1565,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261015-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261015T100000
 DTEND;TZID=Europe/Dublin:20261015T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 6\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 6\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -1570,21 +1589,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261015-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261015T170000
 DTEND;TZID=Europe/Dublin:20261015T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 6
+ .QG15 — DCU Business School\, ground floor\nTeaching week 6
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -1593,21 +1612,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261019-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261019T090000
 DTEND;TZID=Europe/Dublin:20261019T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 7
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1616,21 +1635,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261019-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261019T100000
 DTEND;TZID=Europe/Dublin:20261019T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 7
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 7
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -1639,21 +1658,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261019-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261019T140000
 DTEND;TZID=Europe/Dublin:20261019T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 7
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 7
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -1662,21 +1682,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261020-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261020T110000
 DTEND;TZID=Europe/Dublin:20261020T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 7
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 7
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1685,21 +1705,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261020-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261020T140000
 DTEND;TZID=Europe/Dublin:20261020T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 7
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 7
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -1708,21 +1728,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261021T120000
 DTEND;TZID=Europe/Dublin:20261021T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.QG15\nTeaching week 7
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  7
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1731,21 +1752,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261021T140000
 DTEND;TZID=Europe/Dublin:20261021T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 7
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1754,21 +1775,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261021T150000
 DTEND;TZID=Europe/Dublin:20261021T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 7
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -1777,21 +1798,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261021T170000
 DTEND;TZID=Europe/Dublin:20261021T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 7
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 7
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -1800,21 +1821,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261022-EEG1011-34159f67c1@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261022T140000
 DTEND;TZID=Europe/Dublin:20261022T150000
 SUMMARY:EEG1011 Engineering Mathematics IV
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
-DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nRoom: GLA.S143\
- nTeaching week 7\nOne-off session in week 7
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
+DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nRoom: GLA.S143 
+ — Stokes Building\, 1st floor\nTeaching week 7\nOne-off session in week 
+ 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV
@@ -1823,21 +1845,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261022-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261022T170000
 DTEND;TZID=Europe/Dublin:20261022T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 7
+ .QG15 — DCU Business School\, ground floor\nTeaching week 7
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -1846,21 +1868,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261027-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261027T110000
 DTEND;TZID=Europe/Dublin:20261027T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 8
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 8
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1869,21 +1891,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261027-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261027T140000
 DTEND;TZID=Europe/Dublin:20261027T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 8
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 8
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -1892,21 +1914,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261028T100000
 DTEND;TZID=Europe/Dublin:20261028T120000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
-LOCATION:GLA.SG15\, GLA.SG16\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16\nTeaching week 8\nEven weeks only: 2 4 6 8
+ al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
+  week 8\nEven weeks only: 2 4 6 8
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG15\, GLA.SG16 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG15\, GLA.SG16":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
@@ -1915,21 +1938,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261028T120000
 DTEND;TZID=Europe/Dublin:20261028T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 8
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 8
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -1938,21 +1961,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261028T140000
 DTEND;TZID=Europe/Dublin:20261028T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 8
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 8
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -1961,21 +1984,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261028T150000
 DTEND;TZID=Europe/Dublin:20261028T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 8
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 8
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -1984,21 +2007,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261028T170000
 DTEND;TZID=Europe/Dublin:20261028T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 8
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 8
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -2007,21 +2030,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261029-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261029T100000
 DTEND;TZID=Europe/Dublin:20261029T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 8\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 8\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -2030,21 +2054,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261029-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261029T170000
 DTEND;TZID=Europe/Dublin:20261029T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 8
+ .QG15 — DCU Business School\, ground floor\nTeaching week 8
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -2053,21 +2077,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261102-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261102T090000
 DTEND;TZID=Europe/Dublin:20261102T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 9
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 9
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2076,21 +2100,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261102-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261102T100000
 DTEND;TZID=Europe/Dublin:20261102T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 9
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 9
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -2099,21 +2123,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261102-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261102T140000
 DTEND;TZID=Europe/Dublin:20261102T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 9
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 9
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -2122,21 +2147,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261103-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261103T110000
 DTEND;TZID=Europe/Dublin:20261103T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 9
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 9
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2145,21 +2170,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261103-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261103T140000
 DTEND;TZID=Europe/Dublin:20261103T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 9
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 9
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -2168,21 +2193,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261104-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261104T120000
 DTEND;TZID=Europe/Dublin:20261104T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 9
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 9
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2191,21 +2216,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261104-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261104T140000
 DTEND;TZID=Europe/Dublin:20261104T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 9
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 9
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2214,21 +2239,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261104-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261104T150000
 DTEND;TZID=Europe/Dublin:20261104T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 9
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 9
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -2237,21 +2262,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261104-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261104T170000
 DTEND;TZID=Europe/Dublin:20261104T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 9
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 9
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -2260,21 +2285,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261105-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261105T100000
 DTEND;TZID=Europe/Dublin:20261105T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 9\nGroup 02 - no class in week 7 (reading week)
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 9\nGr
+ oup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -2283,21 +2309,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261105-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261105T170000
 DTEND;TZID=Europe/Dublin:20261105T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 9
+ .QG15 — DCU Business School\, ground floor\nTeaching week 9
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -2306,21 +2332,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261109-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261109T090000
 DTEND;TZID=Europe/Dublin:20261109T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 10
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 10
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2329,21 +2355,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261109-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261109T100000
 DTEND;TZID=Europe/Dublin:20261109T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 10
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 10
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -2352,21 +2378,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261109-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261109T140000
 DTEND;TZID=Europe/Dublin:20261109T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 10
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 10
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -2375,21 +2402,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261110-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261110T110000
 DTEND;TZID=Europe/Dublin:20261110T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 10
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 10
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2398,21 +2425,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261110-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261110T140000
 DTEND;TZID=Europe/Dublin:20261110T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 10
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 10
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -2421,21 +2448,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261111T120000
 DTEND;TZID=Europe/Dublin:20261111T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 10
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 10
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2444,21 +2471,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261111T140000
 DTEND;TZID=Europe/Dublin:20261111T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 10
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 10
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2467,21 +2494,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261111T150000
 DTEND;TZID=Europe/Dublin:20261111T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 10
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 10
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -2490,21 +2517,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261111T170000
 DTEND;TZID=Europe/Dublin:20261111T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 10
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 10
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -2513,22 +2540,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261112-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261112T100000
 DTEND;TZID=Europe/Dublin:20261112T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 10\nGroup 02 - no class in week 7 (reading week
- )
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 10\nG
+ roup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -2537,21 +2564,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261112-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261112T170000
 DTEND;TZID=Europe/Dublin:20261112T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 10
+ .QG15 — DCU Business School\, ground floor\nTeaching week 10
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -2560,21 +2587,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261116-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261116T090000
 DTEND;TZID=Europe/Dublin:20261116T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 11
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 11
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2583,21 +2610,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261116-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261116T100000
 DTEND;TZID=Europe/Dublin:20261116T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 11
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 11
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -2606,21 +2633,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261116-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261116T140000
 DTEND;TZID=Europe/Dublin:20261116T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 11
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 11
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -2629,21 +2657,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261117-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261117T110000
 DTEND;TZID=Europe/Dublin:20261117T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 11
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 11
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2652,21 +2680,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261117-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261117T140000
 DTEND;TZID=Europe/Dublin:20261117T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 11
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 11
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -2675,21 +2703,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261118-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261118T120000
 DTEND;TZID=Europe/Dublin:20261118T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 11
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 11
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2698,21 +2726,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261118-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261118T140000
 DTEND;TZID=Europe/Dublin:20261118T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144\nTeaching week 11
+ Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 11
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2721,21 +2749,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261118-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261118T150000
 DTEND;TZID=Europe/Dublin:20261118T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S144\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S144\nTeaching week 11
+ nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 11
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S144":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S144 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S144":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -2744,21 +2772,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261118-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261118T170000
 DTEND;TZID=Europe/Dublin:20261118T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 11
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 11
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -2767,22 +2795,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261119-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261119T100000
 DTEND;TZID=Europe/Dublin:20261119T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 11\nGroup 02 - no class in week 7 (reading week
- )
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 11\nG
+ roup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -2791,21 +2819,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261119-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261119T170000
 DTEND;TZID=Europe/Dublin:20261119T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 11
+ .QG15 — DCU Business School\, ground floor\nTeaching week 11
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -2814,21 +2842,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261123T090000
 DTEND;TZID=Europe/Dublin:20261123T100000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 12
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 12
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2837,21 +2865,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261123T100000
 DTEND;TZID=Europe/Dublin:20261123T110000
 SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
-LOCATION:GLA.FTG13\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
- , Dublin 9
+LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
+ us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13\nTeaching week 12
+ \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 12
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FTG13":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FTG13 — Polaris Buil
+ ding\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;
+ X-TITLE="GLA.FTG13":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
@@ -2860,21 +2888,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261123T140000
 DTEND;TZID=Europe/Dublin:20261123T170000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, 
- Whitehall\, Dublin 9
+LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
+ evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15\nTeaching week 12
+ ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
+ hing week 12
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15\, DCU 
- Glasnevin Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADI
- US=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SG16\, GLA.SG15 — St
+ okes Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RA
+ DIUS=100;X-TITLE="GLA.SG16\, GLA.SG15":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
@@ -2883,21 +2912,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261124-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261124T110000
 DTEND;TZID=Europe/Dublin:20261124T120000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301\nTeaching week 12
+ ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 12
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2906,21 +2935,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261124-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261124T140000
 DTEND;TZID=Europe/Dublin:20261124T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.FT307\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.FT307 — Polaris Building\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.FT307\nTeaching week 12
+  GLA.FT307 — Polaris Building\, 3rd floor\nTeaching week 12
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.FT307":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.FT307 — Polaris Buil
+ ding\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.FT307":geo:53.3863127,-6.2558544
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
@@ -2929,21 +2958,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261125T120000
 DTEND;TZID=Europe/Dublin:20261125T130000
 SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
-LOCATION:GLA.SA101\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101\nTeaching week 12
+ ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 12
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA101":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA101 — Stokes Exten
+ sion\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA101":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
@@ -2952,21 +2981,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261125T140000
 DTEND;TZID=Europe/Dublin:20261125T150000
 SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143\nTeaching week 12
+ Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 12
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
@@ -2975,21 +3004,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEG1011-65fa0d054e@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261125T150000
 DTEND;TZID=Europe/Dublin:20261125T160000
 SUMMARY:EEG1011 Engineering Mathematics IV (Tutorial)
-LOCATION:GLA.S143\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
+ Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Tutorial\
- nRoom: GLA.S143\nTeaching week 12
+ nRoom: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 12
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.S143":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.S143 — Stokes Buildi
+ ng\, 1st floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-TIT
+ LE="GLA.S143":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEG1011 Engineering Mathematics IV (Tutorial)
@@ -2998,21 +3027,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261125T170000
 DTEND;TZID=Europe/Dublin:20261125T180000
 SUMMARY:EEN1018 Circuits Analysis Techniques
-LOCATION:GLA.SA301\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\
+LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01\nTeaching week 12
+ 01 — Stokes Extension\, 3rd floor\nTeaching week 12
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301\, DCU Glasnevin 
- Campus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-T
- ITLE="GLA.SA301":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=100;X-T
+ ITLE="GLA.SA301":geo:53.3856766,-6.2556846
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1018 Circuits Analysis Techniques
@@ -3021,22 +3050,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261126-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261126T100000
 DTEND;TZID=Europe/Dublin:20261126T120000
 SUMMARY:ESL1009 English Language in Use (Lecture)
-LOCATION:GLA.CG03\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
 DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03\nTeaching week 12\nGroup 02 - no class in week 7 (reading week
- )
+ m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 12\nG
+ roup 02 - no class in week 7 (reading week)
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.CG03":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.CG03 — Henry Grattan
+  Building\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS
+ =100;X-TITLE="GLA.CG03":geo:53.3864061,-6.2602759
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:ESL1009 English Language in Use (Lecture)
@@ -3045,21 +3074,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261126-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;TZID=Europe/Dublin:20261126T170000
 DTEND;TZID=Europe/Dublin:20261126T180000
 SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15\, DCU Glasnevin Campus\, Collins Avenue Ext\, Whitehall\,
-  Dublin 9
+LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
+ mpus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15\nTeaching week 12
+ .QG15 — DCU Business School\, ground floor\nTeaching week 12
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 SEQUENCE:0
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15\, DCU Glasnevin C
- ampus\, Collins Avenue Ext\, Whitehall\, Dublin 9";X-APPLE-RADIUS=100;X-TI
- TLE="GLA.QG15":geo:53.3858,-6.2565
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="GLA.QG15 — DCU Business 
+ School\, ground floor\, DCU Glasnevin Campus\, Dublin 9";X-APPLE-RADIUS=10
+ 0;X-TITLE="GLA.QG15":geo:53.3862005,-6.2574405
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1022 Digital & Analogue Electronics I
@@ -3068,7 +3097,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260907-key-b4c12a584b@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;VALUE=DATE:20260907
 DTEND;VALUE=DATE:20260908
 SUMMARY:Semester 1 teaching starts
@@ -3079,7 +3108,7 @@ SEQUENCE:0
 END:VEVENT
 BEGIN:VEVENT
 UID:20261026-key-71623f380a@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;VALUE=DATE:20261026
 DTEND;VALUE=DATE:20261027
 SUMMARY:University closed — public holiday
@@ -3090,7 +3119,7 @@ SEQUENCE:0
 END:VEVENT
 BEGIN:VEVENT
 UID:20261127-key-3917fafbd1@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:End of Semester 1 teaching
@@ -3101,7 +3130,7 @@ SEQUENCE:0
 END:VEVENT
 BEGIN:VEVENT
 UID:20261130-key-0c01bb5474@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261207
 SUMMARY:Exam study period
@@ -3112,7 +3141,7 @@ SEQUENCE:0
 END:VEVENT
 BEGIN:VEVENT
 UID:20261207-key-8871ae2360@dcu.timetable
-DTSTAMP:20260914T102529Z
+DTSTAMP:20260914T114842Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261220
 SUMMARY:Exam period — Semester 1

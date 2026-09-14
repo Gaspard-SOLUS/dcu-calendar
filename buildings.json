@@ -1,0 +1,48 @@
+{
+  "_comment": "DCU Glasnevin building codes. Names from the official campus map (dcu.ie/campus-maps). Coordinates are only present for buildings that have been checked against Google Maps; any building without lat/lon falls back to the campus centroid in config.json. Add more as you need them.",
+
+  "_room_code_format": "GLA.<building><floor><room> — e.g. GLA.SA301 = Stokes Extension, 3rd floor, room 01. Building codes are one or two characters; the floor is G (ground) or a digit.",
+
+  "buildings": {
+    "A":  { "name": "Albert College" },
+    "B":  { "name": "DCU International Academy" },
+    "C":  { "name": "Henry Grattan Building", "lat": 53.3864061, "lon": -6.2602759 },
+    "CA": { "name": "Henry Grattan Extension" },
+    "D":  { "name": "Bea Orpen Building" },
+    "E":  { "name": "Estates Office" },
+    "F":  { "name": "Multi-Storey Car Park" },
+    "FT": { "name": "Polaris Building", "lat": 53.3863127, "lon": -6.2558544 },
+    "G":  { "name": "Life Sciences Research Facility" },
+    "GA": { "name": "Nano Research Facility" },
+    "H":  { "name": "Alice Reeves Building" },
+    "J":  { "name": "Hamilton Building" },
+    "KA": { "name": "The U, Student Centre" },
+    "L":  { "name": "McNulty Building" },
+    "M":  { "name": "Inter-Faith Centre" },
+    "N":  { "name": "Marconi Building" },
+    "P":  { "name": "Pavilion" },
+    "PR": { "name": "Restaurant" },
+    "Q":  { "name": "DCU Business School", "lat": 53.3862005, "lon": -6.2574405 },
+    "QA": { "name": "MacCormac Building" },
+    "R":  { "name": "Creche" },
+    "S":  { "name": "Stokes Building", "lat": 53.3856766, "lon": -6.2556846 },
+    "SA": { "name": "Stokes Extension", "lat": 53.3856766, "lon": -6.2556846,
+            "note": "Adjoins Stokes; coordinates are the Stokes entrance." },
+    "T":  { "name": "Larkin Lecture Theatre" },
+    "U":  { "name": "University Sports Complex" },
+    "V1": { "name": "Larkfield Residences" },
+    "V2": { "name": "Hamstead Residences" },
+    "VA": { "name": "Postgraduate Residences 1" },
+    "VB": { "name": "Mary Brück Building" },
+    "W":  { "name": "College Park Residences" },
+    "X":  { "name": "Lonsdale Building" },
+    "Y":  { "name": "John and Aileen O'Reilly Library" },
+    "Z":  { "name": "The Helix" }
+  },
+
+  "campuses": {
+    "GLA": "DCU Glasnevin Campus",
+    "SPD": "DCU St Patrick's Campus",
+    "AHC": "DCU All Hallows Campus"
+  }
+}

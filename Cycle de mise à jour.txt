@@ -1,0 +1,16 @@
+cd ~/Documents/00-Projets/dcu-calendar
+
+# 1. MyTimetable → refresh → Multiple weeks → semaines 1-12 → EXCEL
+#    Écraser Timetables.xlsx
+
+# 2. Voir ce qui a bougé
+python3 dcu_to_ics.py --diff DCU_Semester1_2026.ics
+
+# 3. Reconstruire si le diff convient
+python3 dcu_to_ics.py
+
+# 4. Publier
+git add -A
+git status
+git commit -m "Timetable refresh $(date +%F)"
+git push

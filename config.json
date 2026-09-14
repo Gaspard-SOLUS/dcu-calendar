@@ -1,0 +1,25 @@
+{
+  "_comment": "DCU Semester 1 2026/27. Dates from the DCU Registry academic calendar. Edit for another semester; every key is optional.",
+
+  "week1_monday": "2026-09-07",
+
+  "calendar_name": "DCU — Semester 1 2026/27",
+  "calendar_desc": "DCU Glasnevin — teaching timetable.",
+  "tzid": "Europe/Dublin",
+
+  "campus_suffix": "DCU Glasnevin Campus, Dublin 9",
+  "campus_lat": 53.3858,
+  "campus_lon": -6.2565,
+
+  "closures": {
+    "2026-10-26": "October Bank Holiday — University closed"
+  },
+
+  "key_dates": [
+    { "start": "2026-09-07", "title": "Semester 1 teaching starts" },
+    { "start": "2026-10-26", "title": "University closed — public holiday" },
+    { "start": "2026-11-27", "title": "End of Semester 1 teaching" },
+    { "start": "2026-11-30", "end": "2026-12-06", "title": "Exam study period" },
+    { "start": "2026-12-07", "end": "2026-12-19", "title": "Exam period — Semester 1" }
+  ]
+}

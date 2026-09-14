@@ -1,23 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>DCU timetable feed</title>
-  <style>
-    body { font-family: -apple-system, system-ui, sans-serif; max-width: 34rem;
-           margin: 4rem auto; padding: 0 1.5rem; line-height: 1.6; color: #1a1a1a; }
-    code { background: #f4f4f4; padding: .15rem .35rem; border-radius: 3px;
-           font-size: .9em; word-break: break-all; }
-    a.btn { display: inline-block; margin-top: 1rem; padding: .6rem 1.1rem;
-            background: #1a1a1a; color: #fff; text-decoration: none; border-radius: 6px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Emploi du temps DCU — S1 2026/27</title>
+<style>
+  :root {
+    --ink: #16181d; --muted: #5c6370; --line: #e3e6ea;
+    --accent: #0b6b3a; --warn-bg: #fff8e6; --warn-line: #e0b64a;
+    --code-bg: #f5f6f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 5rem;
+    line-height: 1.65; color: var(--ink); background: #fff;
+  }
+  h1 { font-size: 1.85rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
+  .sub { color: var(--muted); margin: 0 0 2rem; }
+  h2 { font-size: 1.12rem; margin: 2.5rem 0 .7rem; padding-top: 1.4rem;
+       border-top: 1px solid var(--line); }
+  p, li { font-size: .97rem; }
+  code { background: var(--code-bg); padding: .12em .4em; border-radius: 4px;
+         font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+         font-size: .875em; word-break: break-all; }
+  pre { background: var(--code-bg); padding: 1rem 1.1rem; border-radius: 8px;
+        overflow-x: auto; border: 1px solid var(--line); }
+  pre code { background: none; padding: 0; font-size: .83rem; word-break: normal; }
+  .cta { display: inline-block; margin: .4rem 0 .8rem; padding: .7rem 1.3rem;
+         background: var(--accent); color: #fff; text-decoration: none;
+         border-radius: 7px; font-weight: 600; font-size: .97rem; }
+  .url { background: var(--code-bg); border: 1px solid var(--line); border-radius: 7px;
+         padding: .8rem 1rem; font-family: ui-monospace, Menlo, monospace;
+         font-size: .8rem; word-break: break-all; margin: 1rem 0; }
+  .warn { background: var(--warn-bg); border: 1px solid var(--warn-line);
+          border-radius: 8px; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+  .warn strong { display: block; margin-bottom: .3rem; }
+  ol, ul { padding-left: 1.3rem; }
+  li { margin: .45rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; }
+  th, td { text-align: left; padding: .5rem .7rem; border-bottom: 1px solid var(--line);
+           vertical-align: top; }
+  th { font-weight: 600; }
+  a { color: var(--accent); }
+  footer { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: .85rem; }
+</style>
 </head>
 <body>
-  <h1>DCU — Semester 1 2026/27</h1>
-  <p>Subscription feed for Apple Calendar. Read-only, refreshed on push.</p>
-  <p><code>https://gaspard-solus.github.io/dcu-calendar/DCU_Semester1_2026.ics</code></p>
-  <a class="btn" href="webcal://gaspard-solus.github.io/dcu-calendar/DCU_Semester1_2026.ics">Subscribe</a>
+
+<h1>Emploi du temps DCU — Semestre 1 2026/27</h1>
+<p class="sub">Tous nos cours dans l'app Calendrier, mis à jour automatiquement.</p>
+
+<p>MyTimetable ne propose aucun export calendrier : DCU a retiré l'option d'abonnement,
+faute de pouvoir garantir qu'un calendrier abonné reste à jour. Ce flux comble le trou.
+Il est reconstruit à partir de l'export Excel officiel et republié dès qu'un créneau
+bouge.</p>
+
+<h2>S'abonner</h2>
+
+<a class="cta" href="webcal://gaspard-solus.github.io/dcu-calendar/DCU_Semester1_2026.ics">S'abonner depuis l'iPhone</a>
+
+<p>Sur iPhone, le bouton ouvre directement la fenêtre d'abonnement. Sinon, copie
+cette adresse :</p>
+
+<div class="url">https://gaspard-solus.github.io/dcu-calendar/DCU_Semester1_2026.ics</div>
+
+<table>
+  <tr><th>Appareil</th><th>Chemin</th></tr>
+  <tr>
+    <td>iPhone</td>
+    <td>Réglages → Apps → Calendrier → Comptes → Ajouter un compte → Autre →
+        <strong>Ajouter un calendrier avec abonnement</strong></td>
+  </tr>
+  <tr>
+    <td>Mac</td>
+    <td>Calendrier → Fichier → Nouvel abonnement à un calendrier… Choisis
+        <strong>iCloud</strong> comme emplacement, pas « Sur mon Mac », sinon ça ne
+        remonte jamais sur ton téléphone. Actualisation : toutes les heures.</td>
+  </tr>
+  <tr>
+    <td>Android / Google</td>
+    <td>calendar.google.com → Autres agendas → <strong>À partir de l'URL</strong>.
+        Attention : Google actualise lentement, parfois plus de 24 h.</td>
+  </tr>
+</table>
+
+<p><strong>Abonne-toi sur un seul appareil.</strong> iCloud propage vers les autres ;
+deux abonnements donnent tous les cours en double.</p>
+
+<div class="warn">
+  <strong>Vérifie tes groupes avant de t'y fier.</strong>
+  Ce flux correspond à notre sélection de modules et aux groupes qui vont avec —
+  notamment <code>ESL1009</code> groupe 02 et le groupe de TP <code>EEN1022</code>.
+  Si tu n'es pas dans les mêmes groupes, certains créneaux seront faux. Compare une
+  semaine avec MyTimetable avant de ranger le téléphone.
+</div>
+
+<h2>Ce que tu obtiens</h2>
+<ul>
+  <li><strong>132 séances</strong> sur les 12 semaines d'enseignement, du 7 septembre
+      au 26 novembre.</li>
+  <li><strong>Le nom complet du bâtiment</strong> dans le lieu :
+      <code>GLA.SA301 — Stokes Extension, 3rd floor</code> plutôt qu'un code opaque.</li>
+  <li><strong>Les coordonnées GPS du bon bâtiment</strong>, pas du centre du campus :
+      « Heure de départ » calcule le trajet jusqu'à Polaris ou Henry Grattan
+      séparément.</li>
+  <li><strong>Les exceptions déjà traitées</strong> : pas de cours le lundi 26 octobre
+      (férié, université fermée), pas d'anglais en semaine 7, TP EEN1018 en semaines
+      paires uniquement, changements de salle en semaines 2 et 12.</li>
+  <li><strong>Les dates de partiels</strong> : fin des cours le 27 novembre, révisions
+      du 30 novembre au 6 décembre, examens du 7 au 19 décembre.</li>
+  <li>Un rappel 15 minutes avant chaque cours, désactivable à l'abonnement.</li>
+</ul>
+
+<h2>Nos bâtiments</h2>
+<table>
+  <tr><th>Code</th><th>Bâtiment</th><th>Cours</th></tr>
+  <tr><td><code>S</code></td><td>Stokes</td><td>Maths, TP Électronique</td></tr>
+  <tr><td><code>SA</code></td><td>Stokes Extension</td><td>Électronique, Circuits</td></tr>
+  <tr><td><code>FT</code></td><td>Polaris</td><td>Circuits, Machine Learning</td></tr>
+  <tr><td><code>Q</code></td><td>DCU Business School</td><td>Électronique</td></tr>
+  <tr><td><code>C</code></td><td>Henry Grattan</td><td>Anglais</td></tr>
+</table>
+<p>Le code se lit <code>GLA</code> (campus) + bâtiment + étage + salle :
+<code>GLA.SA301</code> = Stokes Extension, 3<sup>e</sup> étage, salle 01.
+<code>G</code> signifie rez-de-chaussée.</p>
+
+<h2>Si un cours change</h2>
+<p>Le flux se met à jour tout seul, mais Apple ne recharge que périodiquement. Pour
+forcer : sur Mac, Calendrier → Actualiser les calendriers (⌘R) ; sur iPhone, tire vers
+le bas dans la vue Calendrier.</p>
+<p>Le calendrier est en <strong>lecture seule</strong> : tu ne peux pas y ajouter tes
+propres événements. Crée un calendrier local à côté pour tes deadlines et tes
+révisions.</p>
+<p>Un créneau faux ou manquant ? Dis-le-moi, je régénère. Et en cas de doute,
+<a href="https://mytimetable.dcu.ie">MyTimetable</a> fait foi.</p>
+
+<h2>Le construire toi-même</h2>
+<p>Si tes groupes diffèrent, le dépôt contient le script qui produit le flux. Tu
+exportes ton propre emploi du temps et tu le publies sur ton GitHub :</p>
+<pre><code>git clone https://github.com/Gaspard-SOLUS/dcu-calendar.git
+cd dcu-calendar
+python3 -m pip install pandas openpyxl
+# remplace Timetables.xlsx par ton export, puis
+python3 dcu_to_ics.py</code></pre>
+<p>Sur MyTimetable : clique l'icône de rafraîchissement d'abord — un emploi du temps
+sauvegardé ne se met pas à jour tout seul quand des activités sont ajoutées ou
+supprimées. Puis <em>Multiple weeks</em>, semaines 1 à 12, <em>EXCEL</em>.</p>
+
+<footer>
+  Non officiel, sans lien avec DCU. Noms de bâtiments et codes salles issus du plan du
+  campus DCU ; dates universitaires du calendrier du Registry.
+</footer>
+
 </body>
 </html>

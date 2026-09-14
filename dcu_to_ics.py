@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import json
 import re
 import sys
 from collections import defaultdict
@@ -45,7 +46,7 @@ except ImportError:  # pragma: no cover
 WEEK1_MONDAY = date(2026, 9, 7)  # DCU: "Semester 1 teaching starts"
 
 CALENDAR_NAME = "DCU — Semester 1 2026/27"
-CALENDAR_DESC = "DCU Glasnevin — Semester 1 2026/27."
+CALENDAR_DESC = "DCU Glasnevin — teaching timetable."
 TZID = "Europe/Dublin"
 
 CAMPUS_SUFFIX = "DCU Glasnevin Campus, Collins Avenue Ext, Whitehall, Dublin 9"
@@ -87,6 +88,145 @@ DTSTART:19701025T020000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE"""
+
+
+
+# --------------------------------------------------------------------------- #
+# Room codes                                                                   #
+# --------------------------------------------------------------------------- #
+
+BUILDINGS: dict[str, dict] = {}
+CAMPUSES: dict[str, str] = {}
+
+FLOOR_NAMES = {
+    "G": "ground floor", "0": "ground floor", "1": "1st floor", "2": "2nd floor",
+    "3": "3rd floor", "4": "4th floor", "5": "5th floor", "6": "6th floor",
+}
+
+# GLA.SA301 -> campus 'GLA', tail 'SA301'
+ROOM_RE = re.compile(r"^([A-Za-z]{2,3})\.([A-Za-z0-9]+)$")
+
+
+def load_buildings(path: Path) -> list[str]:
+    """Load the campus building table. Absent file = room codes stay raw."""
+    global BUILDINGS, CAMPUSES
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        sys.exit(f"error: {path} is not valid JSON — {exc}")
+    BUILDINGS = {k.upper(): v for k, v in data.get("buildings", {}).items()}
+    CAMPUSES = {k.upper(): v for k, v in data.get("campuses", {}).items()}
+    located = sum(1 for b in BUILDINGS.values() if "lat" in b)
+    return [f"buildings: {len(BUILDINGS)} known, {located} with coordinates"]
+
+
+def parse_room(code: str) -> dict | None:
+    """'GLA.SA301' -> Stokes Extension, 3rd floor, room 01.
+
+    Building codes are one or two characters, followed by a floor (G or a
+    digit) and the room number. The two-character reading is tried first but
+    only accepted when the code is known AND a valid floor follows, so
+    'GLA.SG16' resolves to Stokes / ground / 16 rather than an unknown 'SG'.
+    """
+    match = ROOM_RE.match(code.strip())
+    if not match:
+        return None
+    campus, tail = match.group(1).upper(), match.group(2).upper()
+
+    def split_at(width: int) -> tuple[str, str, str] | None:
+        head, rest = tail[:width], tail[width:]
+        if head in BUILDINGS and rest and rest[0] in FLOOR_NAMES:
+            return head, rest[0], rest[1:]
+        return None
+
+    parts = split_at(2) or split_at(1)
+    if parts is None:
+        return None
+    building, floor, room = parts
+    entry = BUILDINGS[building]
+
+    return {
+        "campus": CAMPUSES.get(campus, campus),
+        "building_code": building,
+        "building": entry.get("name", building),
+        "floor": FLOOR_NAMES[floor],
+        "room": room,
+        "lat": entry.get("lat"),
+        "lon": entry.get("lon"),
+    }
+
+
+def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
+    """'GLA.SG16, GLA.SG15' -> ('GLA.SG16, GLA.SG15 — Stokes Building, ground floor', lat, lon)
+
+    Returns the display string plus the coordinates of the first resolved
+    building, or (raw, None, None) when nothing resolves.
+    """
+    codes = [c.strip() for c in raw.split(",") if c.strip()]
+    parsed = [(c, parse_room(c)) for c in codes]
+    resolved = [p for _, p in parsed if p]
+    if not resolved:
+        return raw, None, None
+
+    # One label per distinct building+floor, in first-seen order.
+    labels: list[str] = []
+    for info in resolved:
+        label = f"{info['building']}, {info['floor']}"
+        if label not in labels:
+            labels.append(label)
+    display = f"{raw} — {' / '.join(labels)}"
+    return display, resolved[0]["lat"], resolved[0]["lon"]
+
+
+def load_config(path: Path) -> list[str]:
+    """Override the module-level settings above from a JSON file.
+
+    Every key is optional: anything absent keeps the default. Returns a list of
+    human-readable notes for the run report.
+    """
+    global WEEK1_MONDAY, CALENDAR_NAME, CALENDAR_DESC, TZID
+    global CAMPUS_SUFFIX, CAMPUS_LAT, CAMPUS_LON, CLOSURES, KEY_DATES
+
+    if not path.exists():
+        return []
+    try:
+        cfg = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        sys.exit(f"error: {path} is not valid JSON — {exc}")
+
+    notes = [f"config: {path}"]
+
+    def iso(value: str, field: str) -> date:
+        try:
+            return date.fromisoformat(value)
+        except ValueError:
+            sys.exit(f"error: {path}: {field} must be YYYY-MM-DD, got {value!r}")
+
+    if "week1_monday" in cfg:
+        WEEK1_MONDAY = iso(cfg["week1_monday"], "week1_monday")
+        if WEEK1_MONDAY.weekday() != 0:
+            sys.exit(f"error: {path}: week1_monday must be a Monday")
+    CALENDAR_NAME = cfg.get("calendar_name", CALENDAR_NAME)
+    CALENDAR_DESC = cfg.get("calendar_desc", CALENDAR_DESC)
+    TZID = cfg.get("tzid", TZID)
+    CAMPUS_SUFFIX = cfg.get("campus_suffix", CAMPUS_SUFFIX)
+    CAMPUS_LAT = cfg.get("campus_lat", CAMPUS_LAT)
+    CAMPUS_LON = cfg.get("campus_lon", CAMPUS_LON)
+
+    if "closures" in cfg:
+        CLOSURES = {iso(d, "closures"): reason for d, reason in cfg["closures"].items()}
+        notes.append(f"{len(CLOSURES)} closure day(s)")
+    if "key_dates" in cfg:
+        KEY_DATES = [
+            (iso(item["start"], "key_dates.start"),
+             iso(item.get("end", item["start"]), "key_dates.end"),
+             item["title"])
+            for item in cfg["key_dates"]
+        ]
+        notes.append(f"{len(KEY_DATES)} key date(s)")
+    return notes
 
 
 # --------------------------------------------------------------------------- #
@@ -158,11 +298,20 @@ def load_overrides(path: Path | None) -> dict[tuple[str, str, str], dict]:
         return {}
     table: dict[tuple[str, str, str], dict] = {}
     with path.open(newline="", encoding="utf-8-sig") as fh:
-        for row in csv.DictReader(fh):
+        # '#' comments are stripped so the file can document itself.
+        stripped = (line for line in fh if not line.lstrip().startswith("#"))
+        reader = csv.DictReader(stripped)
+        for lineno, row in enumerate(reader, start=2):
             row = {k: (v or "").strip() for k, v in row.items() if k}
             if not row.get("module_code"):
                 continue
+            for field in ("day", "start"):
+                if not row.get(field):
+                    sys.exit(f"error: {path} line {lineno}: '{field}' is required")
             key = (row["module_code"], row["day"].lower(), row["start"])
+            if key in table:
+                sys.exit(f"error: {path} line {lineno}: duplicate entry for "
+                         f"{row['module_code']} {row['day']} {row['start']}")
             table[key] = row
     return table
 
@@ -250,14 +399,15 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
     if session["kind"]:
         title = f"{title} ({session['kind']})"
 
-    location = (
-        f"{session['rooms']}, {CAMPUS_SUFFIX}" if CAMPUS_SUFFIX else session["rooms"]
-    )
+    described, lat, lon = describe_rooms(session["rooms"])
+    location = f"{described}, {CAMPUS_SUFFIX}" if CAMPUS_SUFFIX else described
+    lat = CAMPUS_LAT if lat is None else lat
+    lon = CAMPUS_LON if lon is None else lon
 
     parts = [f"Module: {session['code']} — {session['name']}"]
     if session["kind"]:
         parts.append(f"Type: {session['kind']}")
-    parts.append(f"Room: {session['rooms']}")
+    parts.append(f"Room: {described}")
     if session["lecturer"]:
         parts.append(f"Lecturer: {session['lecturer']}")
     parts.append(f"Teaching week {week_number(session['date'])}")
@@ -284,7 +434,7 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
         (
             f'X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="{escape(location)}";'
             f'X-APPLE-RADIUS=100;X-TITLE="{escape(session["rooms"])}":'
-            f"geo:{CAMPUS_LAT},{CAMPUS_LON}"
+            f"geo:{lat},{lon}"
         ),
     ]
     if alarm:
@@ -415,6 +565,10 @@ def main() -> int:
     )
     parser.add_argument("--xlsx", type=Path, default=Path("Timetables.xlsx"))
     parser.add_argument("--overrides", type=Path, default=Path("overrides.csv"))
+    parser.add_argument("--config", type=Path, default=Path("config.json"),
+                        help="semester settings; ignored if the file is absent")
+    parser.add_argument("--buildings", type=Path, default=Path("buildings.json"),
+                        help="campus building names and coordinates")
     parser.add_argument("--out", type=Path, default=Path("DCU_Semester1_2026.ics"))
     parser.add_argument("--alarm", type=int, default=15,
                         help="minutes before the event; 0 disables alarms")
@@ -431,6 +585,8 @@ def main() -> int:
 
     if not args.xlsx.exists():
         sys.exit(f"error: {args.xlsx} not found")
+
+    config_notes = load_config(args.config) + load_buildings(args.buildings)
 
     sessions = load_sessions(args.xlsx, load_overrides(args.overrides))
     if args.merge_adjacent:
@@ -466,6 +622,8 @@ def main() -> int:
         per_week[week_number(session["date"])] += 1
 
     print(f"{args.out}: {len(kept)} class events, {len(per_module)} modules")
+    for note in config_notes:
+        print(f"  {note}")
     for code in sorted(per_module):
         print(f"  {code:<9} {per_module[code]:>3}")
     span = f"weeks {min(per_week)}–{max(per_week)}" if per_week else "no weeks"
@@ -475,6 +633,20 @@ def main() -> int:
         reason = CLOSURES[session["date"]]
         print(f"  dropped  {session['date']:%d/%m} {session['start']} "
               f"{session['code']} — {reason}")
+    unresolved = sorted({
+        c.strip() for s in kept for c in s["rooms"].split(",")
+        if c.strip() and parse_room(c) is None
+    })
+    if unresolved:
+        print(f"  room code not in buildings.json: {', '.join(unresolved)}")
+    no_geo = sorted({
+        info["building_code"] for s in kept for c in s["rooms"].split(",")
+        if (info := parse_room(c)) and info["lat"] is None
+    })
+    if no_geo:
+        print(f"  no coordinates for building(s) {', '.join(no_geo)} "
+              f"— falling back to the campus centre")
+
     missing = sorted({
         f"{s['code']} {s['weekday'][:3]} {s['start']}"
         for s in kept if not s["kind"]
