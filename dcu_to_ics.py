@@ -33,6 +33,7 @@ import sys
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 try:
     import pandas as pd
@@ -158,7 +159,7 @@ def parse_room(code: str) -> dict | None:
     }
 
 
-def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
+def describe_rooms(raw: str) -> tuple[str, float | None, float | None, str | None]:
     """'GLA.SG16, GLA.SG15' -> ('GLA.SG16, GLA.SG15 — Stokes Building, ground floor', lat, lon)
 
     Returns the display string plus the coordinates of the first resolved
@@ -168,7 +169,7 @@ def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
     parsed = [(c, parse_room(c)) for c in codes]
     resolved = [p for _, p in parsed if p]
     if not resolved:
-        return raw, None, None
+        return raw, None, None, None
 
     # One label per distinct building+floor, in first-seen order.
     labels: list[str] = []
@@ -177,7 +178,7 @@ def describe_rooms(raw: str) -> tuple[str, float | None, float | None]:
         if label not in labels:
             labels.append(label)
     display = f"{raw} — {' / '.join(labels)}"
-    return display, resolved[0]["lat"], resolved[0]["lon"]
+    return display, resolved[0]["lat"], resolved[0]["lon"], resolved[0]["building"]
 
 
 def load_config(path: Path) -> list[str]:
@@ -241,6 +242,18 @@ def escape(value: str) -> str:
         .replace(",", "\\,")
         .replace("\n", "\\n")
     )
+
+
+def param(value: str) -> str:
+    """Quote a parameter value.
+
+    Parameter values have no escaping mechanism in RFC 5545: a quoted string may
+    contain anything except a double quote and control characters. So we strip
+    the characters that cannot appear rather than backslash-escaping them, which
+    some parsers read literally and others reject.
+    """
+    cleaned = value.replace('"', "'").replace("\n", " ").replace("\r", " ")
+    return f'"{cleaned}"'
 
 
 def fold(line: str) -> str:
@@ -399,10 +412,15 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
     if session["kind"]:
         title = f"{title} ({session['kind']})"
 
-    described, lat, lon = describe_rooms(session["rooms"])
+    described, lat, lon, building = describe_rooms(session["rooms"])
     location = f"{described}, {CAMPUS_SUFFIX}" if CAMPUS_SUFFIX else described
     lat = CAMPUS_LAT if lat is None else lat
     lon = CAMPUS_LON if lon is None else lon
+    pin_title = building or CAMPUS_SUFFIX.split(",")[0]
+    # Apple writes X-ADDRESS as newline-separated postal lines, not a CSV string.
+    pin_address = "\\n".join(part.strip() for part in CAMPUS_SUFFIX.split(","))
+    maps_url = (f"https://maps.apple.com/?ll={lat},{lon}&q="
+                + quote(pin_title) + "&z=18")
 
     parts = [f"Module: {session['code']} — {session['name']}"]
     if session["kind"]:
@@ -413,6 +431,7 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
     parts.append(f"Teaching week {week_number(session['date'])}")
     if session["notes"]:
         parts.append(session["notes"])
+    parts.append(f"Map: {maps_url}")
 
     def hhmm(value: str) -> str:
         hh, mm = value.split(":")
@@ -432,10 +451,14 @@ def build_event(session: dict, dtstamp: str, alarm: int | None) -> list[str]:
         "TRANSP:OPAQUE",
         "SEQUENCE:0",
         (
-            f'X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="{escape(location)}";'
-            f'X-APPLE-RADIUS=100;X-TITLE="{escape(session["rooms"])}":'
-            f"geo:{lat},{lon}"
+            "X-APPLE-STRUCTURED-LOCATION;VALUE=URI"
+            f";X-ADDRESS={param(pin_address)}"
+            ";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1"
+            f";X-TITLE={param(pin_title)}"
+            f":geo:{lat},{lon}"
         ),
+        f"GEO:{lat};{lon}",
+        f"URL;VALUE=URI:{maps_url}",
     ]
     if alarm:
         lines += [
