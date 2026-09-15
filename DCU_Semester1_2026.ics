@@ -392,25 +392,26 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260915-EEN1083-13930b9809@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260915T121619Z
 DTSTART;TZID=Europe/Dublin:20260915T140000
 DTEND;TZID=Europe/Dublin:20260915T170000
 SUMMARY:EEN1083 Data Analysis and Machine Learning I
-LOCATION:GLA.SA105 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
- , Dublin 9
+LOCATION:GLA.HG20 — Alice Reeves Building\, ground floor\, DCU Glasnevin 
+ Campus\, Dublin 9
 DESCRIPTION:Module: EEN1083 — Data Analysis and Machine Learning I\nRoom:
-  GLA.SA105 — Stokes Extension\, 1st floor\nTeaching week 2\nMap: https:/
- /maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+  GLA.HG20 — Alice Reeves Building\, ground floor\nTeaching week 2\nMap: 
+ https://maps.apple.com/?ll=53.3858213\,-6.2547002&q=DCU%20Alice%20Reeves%2
+ 0Building&z=17
 CATEGORIES:EEN1083
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
- in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
- sion":geo:53.3856766,-6.2556846
-GEO:53.3856766;-6.2556846
-URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
- es%20Extension&z=17
+ in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Alice Reeves
+  Building":geo:53.3858213,-6.2547002
+GEO:53.3858213;-6.2547002
+URL;VALUE=URI:https://maps.apple.com/?ll=53.3858213,-6.2547002&q=DCU%20Alic
+ e%20Reeves%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:EEN1083 Data Analysis and Machine Learning I
