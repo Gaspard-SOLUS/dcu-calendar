@@ -14,7 +14,7 @@
     "FT": { "name": "Polaris Building", "lat": 53.3863127, "lon": -6.2558544 },
     "G":  { "name": "Life Sciences Research Facility" },
     "GA": { "name": "Nano Research Facility" },
-    "H":  { "name": "Alice Reeves Building" },
+    "H":  { "name": "Alice Reeves Building", "lat": 53.3858213, "lon": -6.2547002 },
     "J":  { "name": "Hamilton Building" },
     "KA": { "name": "The U, Student Centre" },
     "L":  { "name": "McNulty Building" },
