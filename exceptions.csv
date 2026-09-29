@@ -1,0 +1,83 @@
+# Dated, one-off changes on top of the MyTimetable export, taken from each
+# lecturer's own module schedule. Keyed on date + module_code + start, where
+# start is the start time AS IT APPEARS IN THE EXPORT (never changed here, so
+# the event keeps its UID).
+#
+#   action  empty = adjust the session, "cancel" = remove it from the feed,
+#           "add" = create a session the export doesn't have (needs end + rooms)
+#   end     new end time (e.g. kit distribution 14:00-15:00 instead of 14:00-17:00)
+#   rooms   replaces the room list
+#   kind    replaces the session type from overrides.csv for that one date
+#   topic   appended to the title: "EEN1022 ... (Practical) — Lab 1: Logic"
+#   notes   appended to the description
+#
+# Fields containing a comma must be quoted. The run report lists any row that
+# never matched a session — check it after every edit.
+date,module_code,start,action,end,rooms,kind,topic,notes
+
+# --- EEN1022 Digital & Analogue Electronics I (module schedule from the lecturer) ---
+# Monday 14:00-17:00 lab, SG15/SG16
+2026-09-07,EEN1022,14:00,cancel,,,,,No lab in week 1
+2026-09-14,EEN1022,14:00,,15:00,GLA.SG16,Kit distribution,,"ECSA, ECSAO and Paris students"
+2026-09-21,EEN1022,14:00,cancel,,,,,Kit distribution for Physics students only — nothing for us
+2026-09-28,EEN1022,14:00,,,,,Lab 1: Logic,Due Monday 5 October
+2026-10-05,EEN1022,14:00,cancel,,,,,No lab in week 5
+2026-10-12,EEN1022,14:00,,,,,Lab 2: Diode,Due Saturday 17 October
+2026-10-19,EEN1022,14:00,,,,,Lab 3: Transistor,Due Monday 26 October
+2026-11-02,EEN1022,14:00,,,,,Lab 4: Counters,Due Monday 9 November
+2026-11-09,EEN1022,14:00,,,,,Lab available,No new lab this week — the lab is open to catch up
+2026-11-16,EEN1022,14:00,,,,,Lab 5: Arduino,Due Friday 27 November
+2026-11-23,EEN1022,14:00,,15:00,GLA.SG16,Kit return,,Physics & Paris students only
+# Tuesday 11:00 lecture, SA301
+2026-09-08,EEN1022,11:00,,,,,Introduction,
+2026-11-24,EEN1022,11:00,,,,Tutorial,,
+# Wednesday 12:00 lecture, QG15/SA101
+2026-11-25,EEN1022,12:00,,,,Tutorial,,
+# Thursday 17:00 tutorial, QG15 (lectures in weeks 1-2, nothing in week 12)
+2026-09-10,EEN1022,17:00,,,,Lecture,,
+2026-09-17,EEN1022,17:00,,,,Lecture,,
+2026-11-26,EEN1022,17:00,cancel,,,,,No tutorial in week 12
+
+# --- EEN1018 Circuit Analysis Techniques (module schedule from the lecturer) ---
+# Weekly lecture content, on both the Monday 10:00 and Wednesday 17:00 slots.
+# Week 8: Monday is the bank holiday (already dropped), Wednesday is a recap.
+2026-09-14,EEN1018,10:00,,,,,Lecture 1: Module overview & circuit theory recap,
+2026-09-16,EEN1018,17:00,,,,,Lecture 1: Module overview & circuit theory recap,
+2026-09-21,EEN1018,10:00,,,,,Lecture 2: AC signals; resistors & capacitors,
+2026-09-23,EEN1018,17:00,,,,,Lecture 2: AC signals; resistors & capacitors,
+2026-09-28,EEN1018,10:00,,,,,Lecture 3: Linearity; complex impedance & inductors,
+2026-09-30,EEN1018,17:00,,,,,Lecture 3: Linearity; complex impedance & inductors,
+2026-10-05,EEN1018,10:00,,,,,Lecture 4: RLC series resonance,
+2026-10-07,EEN1018,17:00,,,,,Lecture 4: RLC series resonance,
+2026-10-12,EEN1018,10:00,,,,,Lecture 5: Diodes & non-linear devices (Part 1),
+2026-10-14,EEN1018,17:00,,,,,Lecture 5: Diodes & non-linear devices (Part 1),
+2026-10-19,EEN1018,10:00,,,,,Lecture 6: Diodes & non-linear devices (Part 2),
+2026-10-21,EEN1018,17:00,,,,,Lecture 6: Diodes & non-linear devices (Part 2),
+2026-10-28,EEN1018,17:00,,,,,Mid-semester recap,No Monday lecture this week (bank holiday)
+2026-11-02,EEN1018,10:00,,,,,Lecture 7: Passive filter circuits (Part 1),
+2026-11-04,EEN1018,17:00,,,,,Lecture 7: Passive filter circuits (Part 1),
+2026-11-09,EEN1018,10:00,,,,,Lecture 8: Passive filter circuits (Part 2),
+2026-11-11,EEN1018,17:00,,,,,Lecture 8: Passive filter circuits (Part 2),
+2026-11-16,EEN1018,10:00,,,,,Lecture 9: Energy & power in AC circuits,
+2026-11-18,EEN1018,17:00,,,,,Lecture 9: Energy & power in AC circuits,
+2026-11-23,EEN1018,10:00,,,,,Lecture 10: Dependent sources,
+2026-11-25,EEN1018,17:00,,,,,Lecture 10: Dependent sources,
+# Wednesday 10:00-12:00 labs (even weeks)
+2026-09-16,EEN1018,10:00,,,,,Lab 1: DC Analysis,
+2026-09-30,EEN1018,10:00,,,,,Lab 2: AC Analysis,Assignment 1 (10%) — due in week 5
+2026-10-14,EEN1018,10:00,,,,,Lab 3: RLC Resonance,Assignment 2 (20%) — due in week 7
+2026-10-28,EEN1018,10:00,,,,,Lab 4: Rectifier Circuits,Assignment 3 (20%) — due in week 9
+
+# --- EEG1011 Engineering Mathematics IV: Loop quizzes (email from the lecturer) ---
+2026-09-30,EEG1011,14:00,,,,,Loop Quiz 1,"Supervised test in S144 at 2pm — you must be on campus. Missed a quiz? ONE replacement allowed, Monday 23 November at 9am."
+2026-10-21,EEG1011,14:00,,,,,Loop Quiz 2,"Supervised test in S144 at 2pm — you must be on campus. Missed a quiz? ONE replacement allowed, Monday 23 November at 9am."
+2026-11-11,EEG1011,14:00,,,,,Loop Quiz 3,"Supervised test in S144 at 2pm — you must be on campus. Missed a quiz? ONE replacement allowed, Monday 23 November at 9am."
+2026-11-23,EEG1011,09:00,,,,,Replacement Loop quiz (only if you missed one),"Only for students who missed ONE quiz — you may not do a quiz twice. Room not given in the email: check Loop."
+
+# --- ESL1009 English Language in Use (email from the lecturer) ---
+# All assessments are in class, same dates for English groups 1 and 2.
+# Week 13 is outside the export: Assessment 3 is added on the usual Thursday slot.
+2026-10-15,ESL1009,10:00,,,,,Assessment 3 group allocation,Groups for the week 13 research project are decided this week
+2026-10-29,ESL1009,10:00,,,,,Assessment 1: Interpreting data,In-class assessment
+2026-11-12,ESL1009,10:00,,,,,Assessment 2: Argument on a topical media issue,In-class assessment: write a response/argument on a topical issue from a media source
+2026-12-03,ESL1009,10:00,add,12:00,GLA.CG03,Lecture,Assessment 3: Group research project,"In-class group research project on a historical/prominent figure in Irish society. Week 13, usual Thursday slot, for everyone."

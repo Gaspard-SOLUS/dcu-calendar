@@ -17,18 +17,21 @@ automatically (`prefers-color-scheme`, no toggle).
 |---|---|
 | `Timetables.xlsx` | The MyTimetable export. Replace it wholesale on every refresh. |
 | `overrides.csv` | Your enrichment layer: session type, lecturer, notes. Survives re-exports. |
+| `exceptions.csv` | Dated one-off changes from lecturers' own schedules: cancel, shorten, re-room, give a topic (Lab 1: Logic, Loop Quiz 1). |
+| `deadlines.csv` | Coursework deadlines, published as their own events. |
 | `config.json` | Semester dates, closures, key dates, campus address. |
 | `buildings.json` | Campus building names and per-building GPS coordinates. |
 | `dcu_to_ics.py` | Generator. Needs `pandas` + `openpyxl`. |
-| `DCU_Semester1_2026.ics` | Output: 132 class events + 5 all-day academic key dates. |
+| `DCU_Semester1_2026.ics` | Output: 129 class events + 8 deadlines + 5 all-day academic key dates. |
 | `tests/` | `pytest` unit tests for the parsing/escaping/UID logic. |
 | `.github/workflows/build.yml` | Rebuilds and commits the feed automatically on push. |
 
 ```
-EEG1011  37    EEN1018  25    EEN1022  47    EEN1083  12    ESL1009  11
+EEG1011  37    EEN1018  25    EEN1022  43    EEN1083  12    ESL1009  12
 ```
 
-Weeks 1–12 covered, 9 to 13 sessions per week.
+Weeks 1–12 covered, 8 to 13 sessions per week, plus the ESL1009 Assessment 3
+session added in week 13.
 
 ---
 
@@ -49,19 +52,54 @@ keeps matching after a re-export. Adding a row changes the event title from
 `EEN1018 Circuits Analysis Techniques` to
 `EEN1018 Circuits Analysis Techniques (Practical)`.
 
-Five activities still have no `kind` set — the Excel export drops the activity
+Three activities still have no `kind` set — the Excel export drops the activity
 code that carries it. Read them off MyTimetable and fill them in:
 
 | Activity | Code to look for |
 |---|---|
 | EEG1011 Tue 10:00 (week 6 only) | |
 | EEG1011 Thu 14:00 (week 7 only) | |
-| EEN1018 Wed 17:00 | |
-| EEN1022 Thu 17:00 | |
 | EEN1083 Tue 14:00 | |
 
 MyTimetable's naming convention: `OC/L…` = Lecture, `OC/P…` = Practical,
 `OC/T…` = Tutorial. The trailing digits are the group number.
+
+### Lecturers' own schedules: `exceptions.csv` and `deadlines.csv`
+
+Some lecturers publish a module schedule that is more precise than
+MyTimetable: no lab in week 1, kit distribution 2–3pm only, "Lab 3
+(Transistor)", tutorials instead of lectures in week 12, Loop quizzes on a
+given Wednesday. MyTimetable never shows any of that, and `overrides.csv`
+can't express it because it has no date.
+
+`exceptions.csv` is keyed on `date | module_code | start` — `start` being the
+start time *as the export shows it*, never changed, so the event keeps its UID
+and updates in place. Per row: `action` (empty = adjust, `cancel` = remove,
+`add` = create a session the export doesn't have, e.g. an assessment in week
+13 — needs `end` and `rooms`), `end`, `rooms`, `kind`, `topic` (appended to
+the title after an em dash and shown as a `Topic:` line) and `notes` (appended
+to the description). Every run reports cancelled and added sessions and lists
+any row that **never matched a session** — a wrong date or start time fails
+loudly there, not silently. An `add` on a slot the export already has is
+ignored and reported the same way, never duplicated.
+
+`deadlines.csv` (`date, time, module_code, title, notes`) adds events of its
+own, category `Deadlines` plus the module code, free (`TRANSP:TRANSPARENT`).
+A deadline is **always a precise moment** — `time` defaults to 23:59, and
+there is deliberately no all-day or multi-day form. Each one gets two
+reminders, 30 h and 6 h before (about 18:00 the day before and 18:00 on the
+day). When a lecturer only gives the week, pick a day and say so in `notes`
+(the EEN1018 assignments use the Friday). Something that happens during a
+class (a lab, an in-class test, a quiz) belongs on the session as a `topic`
+instead.
+
+Both files are optional and `#` comments are allowed. A value containing a
+comma must be quoted — a line with more fields than the header is an error.
+With `--split`, each module's deadlines go into that module's file.
+`--no-deadlines` leaves them out.
+
+Sources currently encoded: EEN1022 and EEN1018 module schedules from the
+lecturers, the EEG1011 Loop-quiz email, the ESL1009 assessment email.
 
 ## 2. Closures
 
@@ -82,6 +120,7 @@ python3 dcu_to_ics.py --alarm 0                         # no reminders
 python3 dcu_to_ics.py --merge-adjacent                  # fuse back-to-back sessions
 python3 dcu_to_ics.py --split                           # one .ics per module
 python3 dcu_to_ics.py --no-key-dates                    # classes only
+python3 dcu_to_ics.py --no-deadlines                    # no deadlines.csv events
 python3 dcu_to_ics.py --keep-closures                   # keep bank-holiday sessions
 python3 dcu_to_ics.py --ttl 2                           # suggest a 2-hour refresh
 python3 dcu_to_ics.py --diff DCU_Semester1_2026.ics     # dry run: what would change
@@ -128,7 +167,8 @@ Run it before every rebuild — it is the only thing that tells you a room moved
 
 Steps 2–3 also run automatically: `.github/workflows/build.yml` rebuilds and
 commits the feed on every push that touches `Timetables.xlsx`, `overrides.csv`,
-`config.json` or `buildings.json`. So the manual commands above are for
+`exceptions.csv`, `deadlines.csv`, `config.json`, `buildings.json` or
+`dcu_to_ics.py`. So the manual commands above are for
 previewing the diff locally before you push — pushing alone is enough to
 publish.
 
@@ -197,8 +237,8 @@ In `dcu_to_ics.py` (or `config.json`/`buildings.json` where noted):
   report; it no longer affects scheduling.
 
 Worth adding later: a second `URL:` (or a line in the description) pointing at the
-module's Loop page, and a second feed for coursework deadlines subscribed in its
-own colour.
+module's Loop page, and a separate deadlines-only feed subscribed in its own
+colour (today deadlines live in the main feed).
 
 ## 7. Two English-group feeds (EN1 / EN2)
 

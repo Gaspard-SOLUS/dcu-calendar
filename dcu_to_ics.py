@@ -6,6 +6,9 @@ Input   : the .xlsx produced by MyTimetable -> "Multiple weeks" -> EXCEL
           (columns: Module Name, Location, Date, Day, Time range, Weeks, Source)
 Enrich  : overrides.csv — session type, lecturer, notes. Keyed on
           module_code|day|start, so it survives a re-export untouched.
+          exceptions.csv — one-off, dated changes from lecturers' own
+          schedules (cancel a session, shorten it, move it, give it a topic).
+          deadlines.csv — coursework deadlines, added as their own events.
 Output  : an RFC 5545 iCalendar file, Europe/Dublin, stable UIDs. Each event
           carries GEO coordinates and a tap-to-open Apple Maps link for its
           room, and keeps its DTSTAMP/SEQUENCE unchanged run to run unless its
@@ -369,6 +372,7 @@ def load_sessions(xlsx: Path, overrides: dict, used_overrides: set) -> list[dict
                 "kind": extra.get("kind", ""),
                 "lecturer": extra.get("lecturer", ""),
                 "notes": extra.get("notes", ""),
+                "topic": "",
             }
         )
 
@@ -386,6 +390,160 @@ def load_sessions(xlsx: Path, overrides: dict, used_overrides: set) -> list[dict
     return unique
 
 
+def strict_row(path: Path, lineno: int, row: dict) -> dict:
+    """Strip a csv.DictReader row, refusing extra fields: an unquoted comma in
+    a note would otherwise silently cut it short."""
+    if None in row:
+        sys.exit(f"error: {path} line {lineno}: more fields than the header — "
+                 f"quote any value that contains a comma")
+    return {k: (v or "").strip() for k, v in row.items()}
+
+
+EXCEPTION_ACTIONS = {"", "cancel", "add"}
+
+WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+            "Saturday", "Sunday"]
+
+
+def load_exceptions(path: Path | None) -> dict[tuple[date, str, str], dict]:
+    """date|module_code|start -> {action, end, rooms, kind, topic, notes}
+
+    Unlike overrides.csv this is keyed on a real date: it carries what a
+    lecturer's own schedule says about one specific session (no lab this week,
+    kit distribution 2-3pm only, Lab 3: Transistor, quiz today...). `start` is
+    the start time as it appears in the export and is never changed, so the
+    event keeps its UID. `add` creates a session the export doesn't have at
+    all (an assessment in week 13), and then needs `end` and `rooms`.
+    """
+    if not path or not path.exists():
+        return {}
+    table: dict[tuple[date, str, str], dict] = {}
+    with path.open(newline="", encoding="utf-8-sig") as fh:
+        stripped = (line for line in fh if not line.lstrip().startswith("#"))
+        reader = csv.DictReader(stripped)
+        for lineno, row in enumerate(reader, start=2):
+            row = strict_row(path, lineno, row)
+            if not row.get("module_code"):
+                continue
+            for field in ("date", "start"):
+                if not row.get(field):
+                    sys.exit(f"error: {path} line {lineno}: '{field}' is required")
+            try:
+                day = date.fromisoformat(row["date"])
+            except ValueError:
+                sys.exit(f"error: {path} line {lineno}: date must be YYYY-MM-DD, "
+                         f"got {row['date']!r}")
+            row["action"] = row.get("action", "").lower()
+            if row["action"] not in EXCEPTION_ACTIONS:
+                sys.exit(f"error: {path} line {lineno}: action must be empty, "
+                         f"'cancel' or 'add', got {row['action']!r}")
+            if row["action"] == "add":
+                for field in ("end", "rooms"):
+                    if not row.get(field):
+                        sys.exit(f"error: {path} line {lineno}: 'add' needs '{field}'")
+            key = (day, row["module_code"], row["start"])
+            if key in table:
+                sys.exit(f"error: {path} line {lineno}: duplicate entry for "
+                         f"{row['module_code']} {row['date']} {row['start']}")
+            table[key] = row
+    return table
+
+
+def apply_exceptions(sessions: list[dict], exceptions: dict, used: set
+                     ) -> tuple[list[dict], list[tuple[dict, str]], list[dict]]:
+    """Returns (kept sessions, [(cancelled session, reason)], added sessions).
+
+    An `add` row whose slot already exists in the export is ignored (left out
+    of `used`), so the run report flags it instead of creating a duplicate.
+    """
+    kept, cancelled = [], []
+    for session in sessions:
+        key = (session["date"], session["code"], session["start"])
+        rule = exceptions.get(key)
+        if rule is None or rule["action"] == "add":
+            kept.append(session)
+            continue
+        used.add(key)
+        if rule["action"] == "cancel":
+            cancelled.append((session, rule.get("notes", "")))
+            continue
+        for field in ("end", "rooms", "kind", "topic"):
+            if rule.get(field):
+                session[field] = rule[field]
+        if rule.get("notes"):
+            session["notes"] = "\n".join(
+                n for n in (session["notes"], rule["notes"]) if n)
+        kept.append(session)
+
+    names = {s["code"]: s["name"] for s in sessions}
+    existing = {(s["date"], s["code"], s["start"]) for s in sessions}
+    added = []
+    for key, rule in exceptions.items():
+        if rule["action"] != "add" or key in existing:
+            continue
+        day, code, start = key
+        used.add(key)
+        added.append({
+            "code": code,
+            "name": names.get(code, ""),
+            "date": day,
+            "weekday": WEEKDAYS[day.weekday()],
+            "start": start,
+            "end": rule["end"],
+            "rooms": rule["rooms"],
+            "weeks": "",
+            "kind": rule.get("kind", ""),
+            "lecturer": "",
+            "notes": rule.get("notes", ""),
+            "topic": rule.get("topic", ""),
+        })
+    kept += added
+    kept.sort(key=lambda s: (s["date"], s["start"], s["code"]))
+    return kept, cancelled, added
+
+
+# Deadlines are due in the evening unless stated otherwise.
+DEFAULT_DEADLINE_TIME = "23:59"
+
+
+def load_deadlines(path: Path | None) -> list[dict]:
+    """Coursework deadlines -> events of their own, always at a precise time.
+
+    Columns: date, time, module_code, title, notes. `time` defaults to 23:59.
+    Deliberately no all-day or multi-day form: a deadline is a moment, and a
+    week-long banner hides when the work is actually due.
+    """
+    if not path or not path.exists():
+        return []
+    items: list[dict] = []
+    with path.open(newline="", encoding="utf-8-sig") as fh:
+        stripped = (line for line in fh if not line.lstrip().startswith("#"))
+        reader = csv.DictReader(stripped)
+        for lineno, row in enumerate(reader, start=2):
+            row = strict_row(path, lineno, row)
+            if not row.get("date") and not row.get("title"):
+                continue
+            for field in ("date", "title"):
+                if not row.get(field):
+                    sys.exit(f"error: {path} line {lineno}: '{field}' is required")
+            try:
+                day = date.fromisoformat(row["date"])
+            except ValueError as exc:
+                sys.exit(f"error: {path} line {lineno}: {exc}")
+            time = row.get("time") or DEFAULT_DEADLINE_TIME
+            if not re.fullmatch(r"\d{1,2}:\d{2}", time):
+                sys.exit(f"error: {path} line {lineno}: time must be HH:MM, got {time!r}")
+            items.append({
+                "date": day,
+                "time": time,
+                "code": row.get("module_code", ""),
+                "title": row["title"],
+                "notes": row.get("notes", ""),
+            })
+    items.sort(key=lambda d: (d["date"], d["time"], d["code"]))
+    return items
+
+
 def merge_adjacent(sessions: list[dict]) -> list[dict]:
     """Fuse back-to-back sessions of the same module, room, type and day."""
     merged: list[dict] = []
@@ -397,6 +555,7 @@ def merge_adjacent(sessions: list[dict]) -> list[dict]:
                 and m["code"] == session["code"]
                 and m["rooms"] == session["rooms"]
                 and m["kind"] == session["kind"]
+                and m.get("topic") == session.get("topic")
                 and m["end"] == session["start"]
             ),
             None,
@@ -436,6 +595,9 @@ def event_fields(session: dict) -> dict:
     title = f"{session['code']} {session['name']}".strip()
     if session["kind"]:
         title = f"{title} ({session['kind']})"
+    topic = session.get("topic", "")
+    if topic:
+        title = f"{title} — {topic}"
 
     described, lat, lon, building = describe_rooms(session["rooms"])
     location = f"{described}, {CAMPUS_SUFFIX}" if CAMPUS_SUFFIX else described
@@ -453,6 +615,8 @@ def event_fields(session: dict) -> dict:
     parts = [f"Module: {session['code']} — {session['name']}"]
     if session["kind"]:
         parts.append(f"Type: {session['kind']}")
+    if topic:
+        parts.append(f"Topic: {topic}")
     parts.append(f"Room: {described}")
     if session["lecturer"]:
         parts.append(f"Lecturer: {session['lecturer']}")
@@ -535,6 +699,66 @@ def build_key_date(start: date, end_inclusive: date, title: str, dtstamp: str,
         f"SEQUENCE:{sequence}",
         "END:VEVENT",
     ]
+
+
+# Two reminders per deadline: for the usual 23:59 deadline, about 18:00 the
+# day before and 18:00 on the day.
+DEADLINE_ALARMS = ("-PT30H", "-PT6H")
+
+
+def deadline_fields(item: dict, module_names: dict[str, str]) -> dict:
+    """Every field value for a deadline event — shared by rendering and by
+    the DTSTAMP/SEQUENCE stability check, like event_fields()."""
+    code = item["code"]
+    fingerprint = "|".join([code, item["title"]])
+    digest = hashlib.sha1(fingerprint.encode("utf-8")).hexdigest()[:10]
+    uid = f"{item['date']:%Y%m%d}-{slugify(code) or 'deadline'}-due-{digest}@dcu.timetable"
+
+    parts = []
+    if code:
+        name = module_names.get(code, "")
+        parts.append(f"Module: {code} — {name}" if name else f"Module: {code}")
+    parts.append(f"Teaching week {week_number(item['date'])}")
+    if item["notes"]:
+        parts.append(item["notes"])
+
+    # Zero-duration event: the calendar shows it at the exact due time.
+    moment = f"{item['date']:%Y%m%d}T{hhmm(item['time'])}"
+    return {
+        "uid": uid,
+        "summary": f"{code} — {item['title']}" if code else item["title"],
+        "description": "\n".join(parts),
+        "dtstart": moment,
+        "dtend": moment,
+    }
+
+
+def build_deadline(item: dict, module_names: dict[str, str], dtstamp: str,
+                   alarm: int | None, sequence: int = 0) -> list[str]:
+    f = deadline_fields(item, module_names)
+    lines = [
+        "BEGIN:VEVENT",
+        f"UID:{f['uid']}",
+        f"DTSTAMP:{dtstamp}",
+        f"DTSTART;TZID={TZID}:{f['dtstart']}",
+        f"DTEND;TZID={TZID}:{f['dtend']}",
+        f"SUMMARY:{escape(f['summary'])}",
+        f"DESCRIPTION:{escape(f['description'])}",
+        f"CATEGORIES:{escape(item['code']) + ',' if item['code'] else ''}Deadlines",
+        "TRANSP:TRANSPARENT",
+        f"SEQUENCE:{sequence}",
+    ]
+    if alarm:
+        for trigger in DEADLINE_ALARMS:
+            lines += [
+                "BEGIN:VALARM",
+                "ACTION:DISPLAY",
+                f"DESCRIPTION:{escape(f['summary'])}",
+                f"TRIGGER:{trigger}",
+                "END:VALARM",
+            ]
+    lines.append("END:VEVENT")
+    return lines
 
 
 def wrap_calendar(body: list[str], name: str, ttl_hours: int) -> str:
@@ -668,6 +892,11 @@ def main() -> int:
     )
     parser.add_argument("--xlsx", type=Path, default=Path("Timetables.xlsx"))
     parser.add_argument("--overrides", type=Path, default=Path("overrides.csv"))
+    parser.add_argument("--exceptions", type=Path, default=Path("exceptions.csv"),
+                        help="dated one-off changes; ignored if the file is absent")
+    parser.add_argument("--deadlines", type=Path, default=Path("deadlines.csv"),
+                        help="coursework deadlines; ignored if the file is absent")
+    parser.add_argument("--no-deadlines", action="store_true")
     parser.add_argument("--config", type=Path, default=Path("config.json"),
                         help="semester settings; ignored if the file is absent")
     parser.add_argument("--buildings", type=Path, default=Path("buildings.json"),
@@ -698,6 +927,11 @@ def main() -> int:
     overrides = load_overrides(args.overrides)
     used_overrides: set = set()
     sessions = load_sessions(args.xlsx, overrides, used_overrides)
+    exceptions = load_exceptions(args.exceptions)
+    used_exceptions: set = set()
+    sessions, cancelled, added = apply_exceptions(sessions, exceptions, used_exceptions)
+    deadlines = [] if args.no_deadlines else load_deadlines(args.deadlines)
+    module_names = {s["code"]: s["name"] for s in sessions}
     if args.merge_adjacent:
         sessions = merge_adjacent(sessions)
 
@@ -715,6 +949,8 @@ def main() -> int:
         body: list[str] = []
         for session in kept:
             body += build_event(session, stamp, alarm)
+        for item in deadlines:
+            body += build_deadline(item, module_names, stamp, alarm)
         if not args.no_key_dates:
             for start, end, title in KEY_DATES:
                 body += build_key_date(start, end, title, stamp)
@@ -740,6 +976,17 @@ def main() -> int:
         dtstamp, sequence = stamp_for(f["uid"], snapshot, previous, now_stamp)
         session["_dtstamp"], session["_sequence"] = dtstamp, sequence
         body += build_event(session, dtstamp, alarm, sequence)
+    for item in deadlines:
+        f = deadline_fields(item, module_names)
+        snapshot = {
+            "SUMMARY": escape(f["summary"]),
+            "DESCRIPTION": escape(f["description"]),
+            "DTSTART": f["dtstart"],
+            "DTEND": f["dtend"],
+        }
+        dtstamp, sequence = stamp_for(f["uid"], snapshot, previous, now_stamp)
+        item["_dtstamp"], item["_sequence"] = dtstamp, sequence
+        body += build_deadline(item, module_names, dtstamp, alarm, sequence)
     if not args.no_key_dates:
         for start, end, title in KEY_DATES:
             uid = key_date_uid(start, title)
@@ -762,7 +1009,8 @@ def main() -> int:
         per_module[session["code"]] += 1
         per_week[week_number(session["date"])] += 1
 
-    print(f"{args.out}: {len(kept)} class events, {len(per_module)} modules")
+    print(f"{args.out}: {len(kept)} class events, {len(deadlines)} deadlines, "
+          f"{len(per_module)} modules")
     for note in config_notes:
         print(f"  {note}")
     for code in sorted(per_module):
@@ -777,6 +1025,16 @@ def main() -> int:
         reason = CLOSURES[session["date"]]
         print(f"  dropped  {session['date']:%d/%m} {session['start']} "
               f"{session['code']} — {reason}")
+    for session, reason in cancelled:
+        print(f"  cancelled {session['date']:%d/%m} {session['start']} "
+              f"{session['code']} (exceptions.csv){' — ' + reason if reason else ''}")
+    for session in added:
+        topic = f" — {session['topic']}" if session["topic"] else ""
+        print(f"  added    {session['date']:%d/%m} {session['start']} "
+              f"{session['code']} (exceptions.csv){topic}")
+    modified = len(used_exceptions) - len(cancelled) - len(added)
+    if modified:
+        print(f"  exceptions.csv: {modified} session(s) adjusted")
     unresolved = sorted({
         c.strip() for s in kept for c in s["rooms"].split(",")
         if c.strip() and parse_room(c) is None
@@ -805,11 +1063,22 @@ def main() -> int:
               f"(stale after a re-export?): "
               + ", ".join(f"{code} {day} {start}" for code, day, start in unused))
 
+    # A typo in a date or a start time would otherwise fail silently.
+    unused_exc = sorted(set(exceptions) - used_exceptions)
+    if unused_exc:
+        print(f"  exceptions.csv: {len(unused_exc)} row(s) never matched a session "
+              f"(wrong date/start, or not in this export): "
+              + ", ".join(f"{code} {day:%d/%m} {start}" for day, code, start in unused_exc))
+
     if args.split:
         by_code: dict[str, list[str]] = defaultdict(list)
         for session in kept:
             by_code[session["code"]] += build_event(
                 session, session["_dtstamp"], alarm, session["_sequence"])
+        for item in deadlines:
+            if item["code"] in per_module:
+                by_code[item["code"]] += build_deadline(
+                    item, module_names, item["_dtstamp"], alarm, item["_sequence"])
         for code, lines in sorted(by_code.items()):
             path = args.out.with_name(f"{args.out.stem}_{code}{args.out.suffix}")
             path.write_text(wrap_calendar(lines, f"DCU {code}", args.ttl),

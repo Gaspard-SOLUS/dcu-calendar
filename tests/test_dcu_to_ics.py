@@ -11,6 +11,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
@@ -98,7 +100,7 @@ def _session(**overrides) -> dict:
         "code": "EEG1011", "name": "Engineering Mathematics IV",
         "date": date(2026, 9, 7), "weekday": "Monday", "start": "09:00",
         "end": "10:00", "rooms": "GLA.S143", "weeks": "1-12",
-        "kind": "", "lecturer": "", "notes": "",
+        "kind": "", "lecturer": "", "notes": "", "topic": "",
     }
     base.update(overrides)
     return base
@@ -171,3 +173,151 @@ def test_read_events_ignores_nested_valarm_fields():
     ]
     events = dcu.read_events_from_lines(lines)
     assert events["e1@dcu.timetable"]["DESCRIPTION"] == "Real description"
+
+
+# --------------------------------------------------------------------------- #
+# exceptions.csv — dated one-off changes                                      #
+# --------------------------------------------------------------------------- #
+
+def _write(tmp_path, name: str, text: str) -> Path:
+    path = tmp_path / name
+    path.write_text(text, encoding="utf-8")
+    return path
+
+
+EXC_HEADER = "date,module_code,start,action,end,rooms,kind,topic,notes\n"
+
+
+def test_apply_exceptions_cancel_and_adjust(tmp_path):
+    path = _write(tmp_path, "exceptions.csv", EXC_HEADER
+                  + "# comment line\n"
+                  + "2026-09-07,EEG1011,09:00,cancel,,,,,No class\n"
+                  + "2026-09-14,EEG1011,09:00,,09:30,GLA.SG16,Quiz,Loop Quiz 1,On campus\n")
+    table = dcu.load_exceptions(path)
+    sessions = [_session(), _session(date=date(2026, 9, 14), notes="Base note"),
+                _session(date=date(2026, 9, 21))]
+    used: set = set()
+    kept, cancelled, added = dcu.apply_exceptions(sessions, table, used)
+
+    assert added == []
+    assert [s["date"] for s, _ in cancelled] == [date(2026, 9, 7)]
+    assert cancelled[0][1] == "No class"
+    assert len(kept) == 2 and len(used) == 2
+    adjusted = kept[0]
+    assert adjusted["end"] == "09:30"
+    assert adjusted["rooms"] == "GLA.SG16"
+    assert adjusted["kind"] == "Quiz"
+    assert adjusted["topic"] == "Loop Quiz 1"
+    assert adjusted["notes"] == "Base note\nOn campus"
+    assert kept[1]["end"] == "10:00"  # untouched week
+
+
+def test_exception_keeps_uid_and_shows_topic_in_title():
+    before = _session(topic="")
+    after = _session(topic="Loop Quiz 1", end="09:30", rooms="GLA.SG16")
+    assert dcu.make_uid(before) == dcu.make_uid(after)
+    fields = dcu.event_fields(after)
+    assert fields["summary"].endswith("— Loop Quiz 1")
+    assert "Topic: Loop Quiz 1" in fields["description"]
+
+
+def test_load_exceptions_rejects_unknown_action(tmp_path):
+    path = _write(tmp_path, "exceptions.csv",
+                  EXC_HEADER + "2026-09-07,EEG1011,09:00,delete,,,,,\n")
+    with pytest.raises(SystemExit):
+        dcu.load_exceptions(path)
+
+
+def test_load_exceptions_rejects_duplicates(tmp_path):
+    row = "2026-09-07,EEG1011,09:00,cancel,,,,,\n"
+    path = _write(tmp_path, "exceptions.csv", EXC_HEADER + row + row)
+    with pytest.raises(SystemExit):
+        dcu.load_exceptions(path)
+
+
+def test_load_exceptions_rejects_unquoted_comma(tmp_path):
+    path = _write(tmp_path, "exceptions.csv",
+                  EXC_HEADER + "2026-09-07,EEG1011,09:00,,,,,,Week 13, usual slot\n")
+    with pytest.raises(SystemExit):
+        dcu.load_exceptions(path)
+
+
+def test_apply_exceptions_add_creates_session_outside_export(tmp_path):
+    path = _write(tmp_path, "exceptions.csv", EXC_HEADER
+                  + "2026-12-03,ESL1009,10:00,add,12:00,GLA.CG03,Lecture,Assessment 3,\n")
+    sessions = [_session(code="ESL1009", name="English Language in Use",
+                         date=date(2026, 11, 26), weekday="Thursday", start="10:00")]
+    used: set = set()
+    kept, cancelled, added = dcu.apply_exceptions(
+        sessions, dcu.load_exceptions(path), used)
+    assert cancelled == [] and len(added) == 1 and len(kept) == 2
+    new = added[0]
+    assert new["weekday"] == "Thursday"
+    assert new["name"] == "English Language in Use"
+    assert (new["start"], new["end"], new["rooms"]) == ("10:00", "12:00", "GLA.CG03")
+    assert kept[-1] is new  # sorted by date
+    assert dcu.event_fields(new)["summary"].endswith("(Lecture) — Assessment 3")
+
+
+def test_add_on_existing_slot_is_not_duplicated(tmp_path):
+    path = _write(tmp_path, "exceptions.csv", EXC_HEADER
+                  + "2026-09-07,EEG1011,09:00,add,10:00,GLA.S143,,,\n")
+    used: set = set()
+    kept, _, added = dcu.apply_exceptions([_session()], dcu.load_exceptions(path), used)
+    assert added == [] and len(kept) == 1
+    assert used == set()  # reported as "never matched"
+
+
+def test_load_exceptions_add_needs_end_and_rooms(tmp_path):
+    path = _write(tmp_path, "exceptions.csv",
+                  EXC_HEADER + "2026-12-03,ESL1009,10:00,add,,,,,\n")
+    with pytest.raises(SystemExit):
+        dcu.load_exceptions(path)
+
+
+# --------------------------------------------------------------------------- #
+# deadlines.csv — always a precise moment, 23:59 by default                   #
+# --------------------------------------------------------------------------- #
+
+DL_HEADER = "date,time,module_code,title,notes\n"
+
+
+def test_deadline_defaults_to_2359_and_is_never_all_day(tmp_path):
+    path = _write(tmp_path, "deadlines.csv", DL_HEADER
+                  + '2026-10-05,,EEN1022,Lab 1 due,"a, b"\n')
+    (item,) = dcu.load_deadlines(path)
+    f = dcu.deadline_fields(item, {"EEN1022": "Digital & Analogue Electronics I"})
+    assert (f["dtstart"], f["dtend"]) == ("20261005T235900", "20261005T235900")
+    assert f["summary"] == "EEN1022 — Lab 1 due"
+    assert "Digital & Analogue Electronics I" in f["description"]
+    assert "a, b" in f["description"]
+    lines = dcu.build_deadline(item, {}, "20260101T000000Z", 15)
+    assert "DTSTART;TZID=Europe/Dublin:20261005T235900" in lines
+    assert not any("VALUE=DATE" in line for line in lines)
+    for trigger in dcu.DEADLINE_ALARMS:
+        assert f"TRIGGER:{trigger}" in lines
+
+
+def test_deadline_explicit_time(tmp_path):
+    path = _write(tmp_path, "deadlines.csv", DL_HEADER + "2026-10-05,17:00,EEN1022,Lab 1 due,\n")
+    (item,) = dcu.load_deadlines(path)
+    assert dcu.deadline_fields(item, {})["dtstart"] == "20261005T170000"
+
+
+def test_deadline_no_alarm_when_disabled(tmp_path):
+    path = _write(tmp_path, "deadlines.csv", DL_HEADER + "2026-10-05,,EEN1022,Lab 1 due,\n")
+    (item,) = dcu.load_deadlines(path)
+    assert "BEGIN:VALARM" not in dcu.build_deadline(item, {}, "20260101T000000Z", None)
+
+
+def test_deadline_uid_ignores_notes_and_time():
+    a = {"date": date(2026, 10, 5), "time": "23:59", "code": "EEN1022",
+         "title": "Lab 1 due", "notes": ""}
+    b = dict(a, notes="moved to Loop", time="17:00")
+    assert dcu.deadline_fields(a, {})["uid"] == dcu.deadline_fields(b, {})["uid"]
+
+
+def test_load_deadlines_rejects_bad_time(tmp_path):
+    path = _write(tmp_path, "deadlines.csv", DL_HEADER + "2026-10-05,midnight,EEN1022,Lab 1 due,\n")
+    with pytest.raises(SystemExit):
+        dcu.load_deadlines(path)

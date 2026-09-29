@@ -3,7 +3,8 @@ name: Rebuild calendar feed
 # Runs the generator whenever one of its inputs changes, commits the
 # regenerated .ics, and pushes it — no local Python/pandas setup needed for a
 # routine refresh: drop the new Timetables.xlsx in the repo, or edit
-# overrides.csv/config.json/buildings.json, and push.
+# overrides.csv/exceptions.csv/deadlines.csv/config.json/buildings.json,
+# and push.
 #
 # Also prepared for two English-group feeds (see README "Deux groupes
 # d'anglais"): the EN1/EN2 steps below are no-ops today (the `if:` guard
@@ -17,6 +18,8 @@ on:
       - "Timetables_EN1.xlsx"
       - "Timetables_EN2.xlsx"
       - "overrides.csv"
+      - "exceptions.csv"
+      - "deadlines.csv"
       - "config.json"
       - "buildings.json"
       - "dcu_to_ics.py"

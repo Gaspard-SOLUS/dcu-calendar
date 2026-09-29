@@ -1,0 +1,29 @@
+# Coursework deadlines, published as their own events in the feed.
+#
+#   date        YYYY-MM-DD (required)
+#   time        HH:MM, defaults to 23:59 — deadlines are always a precise
+#               moment, never an all-day or week-long event
+#   module_code shown first in the title and used as the category
+#   title       required
+#   notes       description; quote the field if it contains a comma
+#
+# Two reminders per deadline: 30 h and 6 h before (about 18:00 the day before
+# and 18:00 on the day for a 23:59 deadline).
+#
+# Something that happens during a class (a lab, an in-class test, a quiz)
+# belongs on the session itself, as a topic in exceptions.csv.
+date,time,module_code,title,notes
+
+# --- EEN1022 Digital & Analogue Electronics I: lab reports ---
+2026-10-05,23:59,EEN1022,Lab 1 (Logic) due,
+2026-10-17,23:59,EEN1022,Lab 2 (Diode) due,
+2026-10-26,23:59,EEN1022,Lab 3 (Transistor) due,Due even though it is the October bank holiday
+2026-11-09,23:59,EEN1022,Lab 4 (Counters) due,
+2026-11-27,23:59,EEN1022,Lab 5 (Arduino) due,
+
+# --- EEN1018 Circuit Analysis Techniques: assignments ---
+# The module schedule gives only the week (5, 7, 9); Friday of that week is
+# assumed until the exact day is known.
+2026-10-09,23:59,EEN1018,Assignment 1 due (10%),"Lab 2 (AC Analysis) write-up. The module schedule only says week 5: Friday assumed, check Loop."
+2026-10-23,23:59,EEN1018,Assignment 2 due (20%),"Lab 3 (RLC Resonance) write-up. The module schedule only says week 7: Friday assumed, check Loop."
+2026-11-06,23:59,EEN1018,Assignment 3 due (20%),"Lab 4 (Rectifier Circuits) write-up. The module schedule only says week 9: Friday assumed, check Loop."
