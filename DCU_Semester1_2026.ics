@@ -56,49 +56,21 @@ TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:20260907-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
-DTSTART;TZID=Europe/Dublin:20260907T140000
-DTEND;TZID=Europe/Dublin:20260907T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
- evin Campus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 1\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
-CATEGORIES:EEN1022
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-SEQUENCE:1
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
- in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
- ing":geo:53.3856766,-6.2556846
-GEO:53.3856766;-6.2556846
-URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
- es%20Building&z=17
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
-TRIGGER:-PT15M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:20260908-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260908T110000
 DTEND;TZID=Europe/Dublin:20260908T120000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture) — Introduction
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 1\nM
- ap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Ext
- ension&z=17
+ ture\nTopic: Introduction\nRoom: GLA.SA301 — Stokes Extension\, 3rd floo
+ r\nTeaching week 1\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846
+ &q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -107,7 +79,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture) — Introduc
+ tion
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -252,20 +225,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260910-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260910T170000
 DTEND;TZID=Europe/Dublin:20260910T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 1\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  1\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20B
+ usiness%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -274,7 +247,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -308,20 +281,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260914-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260914T100000
 DTEND;TZID=Europe/Dublin:20260914T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 1: Modul
+ e overview & circuit theory recap
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 2\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 1: Module overview & circuit theory recap\nRoom: GLA.FTG1
+ 3 — Polaris Building\, ground floor\nTeaching week 2\nMap: https://maps.
+ apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -330,26 +304,27 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 1: M
+ odule overview & circuit theory recap
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260914-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260914T140000
-DTEND;TZID=Europe/Dublin:20260914T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
- evin Campus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 2\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
+DTEND;TZID=Europe/Dublin:20260914T150000
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Kit distribution)
+LOCATION:GLA.SG16 — Stokes Building\, ground floor\, DCU Glasnevin Campus
+ \, Dublin 9
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Kit
+  distribution\nRoom: GLA.SG16 — Stokes Building\, ground floor\nTeaching
+  week 2\nECSA\, ECSAO and Paris students\nMap: https://maps.apple.com/?ll=
+ 53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -358,7 +333,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Kit distribution)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -420,20 +395,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260916T100000
 DTEND;TZID=Europe/Dublin:20260916T120000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Practical) — Lab 1: DC Anal
+ ysis
 LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
-  week 2\nEven weeks only: 2 4 6 8\nMap: https://maps.apple.com/?ll=53.3856
- 766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
+ al\nTopic: Lab 1: DC Analysis\nRoom: GLA.SG15\, GLA.SG16 — Stokes Buildi
+ ng\, ground floor\nTeaching week 2\nEven weeks only: 2 4 6 8\nMap: https:/
+ /maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -442,7 +418,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical) — Lab 1: DC 
+ Analysis
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -532,19 +509,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260916-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260916T170000
 DTEND;TZID=Europe/Dublin:20260916T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 1: Modul
+ e overview & circuit theory recap
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 2\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 1: Module overview & circuit theory recap\nRoom: GLA.SA30
+ 1 — Stokes Extension\, 3rd floor\nTeaching week 2\nMap: https://maps.app
+ le.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -553,7 +532,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 1: M
+ odule overview & circuit theory recap
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -587,20 +567,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260917-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260917T170000
 DTEND;TZID=Europe/Dublin:20260917T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 2\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
+ ture\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching week
+  2\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20B
+ usiness%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -609,7 +589,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -643,20 +623,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260921-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260921T100000
 DTEND;TZID=Europe/Dublin:20260921T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 2: AC si
+ gnals\; resistors & capacitors
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 3\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 2: AC signals\; resistors & capacitors\nRoom: GLA.FTG13 
+ — Polaris Building\, ground floor\nTeaching week 3\nMap: https://maps.ap
+ ple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -665,35 +646,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
-TRIGGER:-PT15M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:20260921-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
-DTSTART;TZID=Europe/Dublin:20260921T140000
-DTEND;TZID=Europe/Dublin:20260921T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
- evin Campus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 3\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
-CATEGORIES:EEN1022
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-SEQUENCE:1
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
- in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
- ing":geo:53.3856766,-6.2556846
-GEO:53.3856766;-6.2556846
-URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
- es%20Building&z=17
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 2: A
+ C signals\; resistors & capacitors
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -838,19 +792,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260923-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260923T170000
 DTEND;TZID=Europe/Dublin:20260923T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 2: AC si
+ gnals\; resistors & capacitors
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 3\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 2: AC signals\; resistors & capacitors\nRoom: GLA.SA301 
+ — Stokes Extension\, 3rd floor\nTeaching week 3\nMap: https://maps.apple
+ .com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -859,7 +815,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 2: A
+ C signals\; resistors & capacitors
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -893,20 +850,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260924-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260924T170000
 DTEND;TZID=Europe/Dublin:20260924T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 3\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 3\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -915,7 +872,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -949,20 +906,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260928-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260928T100000
 DTEND;TZID=Europe/Dublin:20260928T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 3: Linea
+ rity\; complex impedance & inductors
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 4\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 3: Linearity\; complex impedance & inductors\nRoom: GLA.F
+ TG13 — Polaris Building\, ground floor\nTeaching week 4\nMap: https://ma
+ ps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -971,26 +929,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 3: L
+ inearity\; complex impedance & inductors
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260928-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260928T140000
 DTEND;TZID=Europe/Dublin:20260928T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 1: Log
+ ic
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 4\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
+ ctical\nTopic: Lab 1: Logic\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building
+ \, ground floor\nTeaching week 4\nDue Monday 5 October\nMap: https://maps.
+ apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -999,7 +959,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 1:
+  Logic
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1060,20 +1021,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260930T100000
 DTEND;TZID=Europe/Dublin:20260930T120000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Practical) — Lab 2: AC Anal
+ ysis
 LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
-  week 4\nEven weeks only: 2 4 6 8\nMap: https://maps.apple.com/?ll=53.3856
- 766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
+ al\nTopic: Lab 2: AC Analysis\nRoom: GLA.SG15\, GLA.SG16 — Stokes Buildi
+ ng\, ground floor\nTeaching week 4\nEven weeks only: 2 4 6 8\nAssignment 1
+  (10%) — due in week 5\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2
+ 556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -1082,7 +1045,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical) — Lab 2: AC 
+ Analysis
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1116,20 +1080,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260930T140000
 DTEND;TZID=Europe/Dublin:20260930T150000
-SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
+SUMMARY:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 1
 LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
  Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 4\nMap: http
- s://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=
- 17
+ Topic: Loop Quiz 1\nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeachi
+ ng week 4\nSupervised test in S144 at 2pm — you must be on campus. Misse
+ d a quiz? ONE replacement allowed\, Monday 23 November at 9am.\nMap: https
+ ://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=1
+ 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -1138,7 +1104,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
+DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 1
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1172,19 +1138,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20260930-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20260930T170000
 DTEND;TZID=Europe/Dublin:20260930T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 3: Linea
+ rity\; complex impedance & inductors
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 4\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 3: Linearity\; complex impedance & inductors\nRoom: GLA.S
+ A301 — Stokes Extension\, 3rd floor\nTeaching week 4\nMap: https://maps.
+ apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -1193,7 +1161,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 3: L
+ inearity\; complex impedance & inductors
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1227,20 +1196,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261001-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261001T170000
 DTEND;TZID=Europe/Dublin:20261001T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 4\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 4\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -1249,7 +1218,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1283,20 +1252,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261005-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261005T100000
 DTEND;TZID=Europe/Dublin:20261005T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 4: RLC s
+ eries resonance
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 5\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 4: RLC series resonance\nRoom: GLA.FTG13 — Polaris Buil
+ ding\, ground floor\nTeaching week 5\nMap: https://maps.apple.com/?ll=53.3
+ 863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -1305,35 +1275,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
-TRIGGER:-PT15M
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:20261005-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
-DTSTART;TZID=Europe/Dublin:20261005T140000
-DTEND;TZID=Europe/Dublin:20261005T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
- evin Campus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 5\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
-CATEGORIES:EEN1022
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-SEQUENCE:1
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
- in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
- ing":geo:53.3856766,-6.2556846
-GEO:53.3856766;-6.2556846
-URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
- es%20Building&z=17
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 4: R
+ LC series resonance
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1478,19 +1421,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261007-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261007T170000
 DTEND;TZID=Europe/Dublin:20261007T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 4: RLC s
+ eries resonance
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 5\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 4: RLC series resonance\nRoom: GLA.SA301 — Stokes Exten
+ sion\, 3rd floor\nTeaching week 5\nMap: https://maps.apple.com/?ll=53.3856
+ 766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -1499,7 +1444,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 4: R
+ LC series resonance
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1533,20 +1479,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261008-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261008T170000
 DTEND;TZID=Europe/Dublin:20261008T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 5\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 5\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -1555,7 +1501,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1589,20 +1535,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261012-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261012T100000
 DTEND;TZID=Europe/Dublin:20261012T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 5: Diode
+ s & non-linear devices (Part 1)
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 6\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 5: Diodes & non-linear devices (Part 1)\nRoom: GLA.FTG13 
+ — Polaris Building\, ground floor\nTeaching week 6\nMap: https://maps.ap
+ ple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -1611,26 +1558,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 5: D
+ iodes & non-linear devices (Part 1)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261012-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261012T140000
 DTEND;TZID=Europe/Dublin:20261012T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 2: Dio
+ de
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 6\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
+ ctical\nTopic: Lab 2: Diode\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building
+ \, ground floor\nTeaching week 6\nDue Saturday 17 October\nMap: https://ma
+ ps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -1639,7 +1588,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 2:
+  Diode
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1728,20 +1678,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261014T100000
 DTEND;TZID=Europe/Dublin:20261014T120000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Practical) — Lab 3: RLC Res
+ onance
 LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
-  week 6\nEven weeks only: 2 4 6 8\nMap: https://maps.apple.com/?ll=53.3856
- 766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
+ al\nTopic: Lab 3: RLC Resonance\nRoom: GLA.SG15\, GLA.SG16 — Stokes Buil
+ ding\, ground floor\nTeaching week 6\nEven weeks only: 2 4 6 8\nAssignment
+  2 (20%) — due in week 7\nMap: https://maps.apple.com/?ll=53.3856766\,-6
+ .2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -1750,7 +1702,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical) — Lab 3: RLC
+  Resonance
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1840,19 +1793,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261014-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261014T170000
 DTEND;TZID=Europe/Dublin:20261014T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 5: Diode
+ s & non-linear devices (Part 1)
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 6\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 5: Diodes & non-linear devices (Part 1)\nRoom: GLA.SA301 
+ — Stokes Extension\, 3rd floor\nTeaching week 6\nMap: https://maps.apple
+ .com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -1861,26 +1816,30 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 5: D
+ iodes & non-linear devices (Part 1)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261015-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261015T100000
 DTEND;TZID=Europe/Dublin:20261015T120000
-SUMMARY:ESL1009 English Language in Use (Lecture)
+SUMMARY:ESL1009 English Language in Use (Lecture) — Assessment 3 group al
+ location
 LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
   Campus\, Dublin 9
-DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 6\nGr
- oup 02 - no class in week 7 (reading week)\nMap: https://maps.apple.com/?l
- l=53.3864061\,-6.2602759&q=DCU%20Henry%20Grattan%20Building&z=17
+DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nTop
+ ic: Assessment 3 group allocation\nRoom: GLA.CG03 — Henry Grattan Buildi
+ ng\, ground floor\nTeaching week 6\nGroup 02 - no class in week 7 (reading
+  week)\nGroups for the week 13 research project are decided this week\nMap
+ : https://maps.apple.com/?ll=53.3864061\,-6.2602759&q=DCU%20Henry%20Gratta
+ n%20Building&z=17
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Henry Gratta
  n Building":geo:53.3864061,-6.2602759
@@ -1889,26 +1848,27 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3864061,-6.2602759&q=DCU%20Henr
  y%20Grattan%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:ESL1009 English Language in Use (Lecture)
+DESCRIPTION:ESL1009 English Language in Use (Lecture) — Assessment 3 grou
+ p allocation
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261015-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261015T170000
 DTEND;TZID=Europe/Dublin:20261015T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 6\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 6\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -1917,7 +1877,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -1951,20 +1911,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261019-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261019T100000
 DTEND;TZID=Europe/Dublin:20261019T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 6: Diode
+ s & non-linear devices (Part 2)
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 7\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 6: Diodes & non-linear devices (Part 2)\nRoom: GLA.FTG13 
+ — Polaris Building\, ground floor\nTeaching week 7\nMap: https://maps.ap
+ ple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -1973,26 +1934,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 6: D
+ iodes & non-linear devices (Part 2)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261019-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261019T140000
 DTEND;TZID=Europe/Dublin:20261019T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 3: Tra
+ nsistor
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 7\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
+ ctical\nTopic: Lab 3: Transistor\nRoom: GLA.SG16\, GLA.SG15 — Stokes Bui
+ lding\, ground floor\nTeaching week 7\nDue Monday 26 October\nMap: https:/
+ /maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2001,7 +1964,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 3:
+  Transistor
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2090,20 +2054,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261021T140000
 DTEND;TZID=Europe/Dublin:20261021T150000
-SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
+SUMMARY:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 2
 LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
  Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 7\nMap: http
- s://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=
- 17
+ Topic: Loop Quiz 2\nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeachi
+ ng week 7\nSupervised test in S144 at 2pm — you must be on campus. Misse
+ d a quiz? ONE replacement allowed\, Monday 23 November at 9am.\nMap: https
+ ://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=1
+ 7
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2112,7 +2078,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
+DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 2
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2146,19 +2112,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261021-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261021T170000
 DTEND;TZID=Europe/Dublin:20261021T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 6: Diode
+ s & non-linear devices (Part 2)
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 7\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 6: Diodes & non-linear devices (Part 2)\nRoom: GLA.SA301 
+ — Stokes Extension\, 3rd floor\nTeaching week 7\nMap: https://maps.apple
+ .com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -2167,7 +2135,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 6: D
+ iodes & non-linear devices (Part 2)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2201,20 +2170,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261022-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261022T170000
 DTEND;TZID=Europe/Dublin:20261022T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 7\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 7\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -2223,7 +2192,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2284,20 +2253,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEN1018-9b09e34a30@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261028T100000
 DTEND;TZID=Europe/Dublin:20261028T120000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Practical)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Practical) — Lab 4: Rectifi
+ er Circuits
 LOCATION:GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Practic
- al\nRoom: GLA.SG15\, GLA.SG16 — Stokes Building\, ground floor\nTeaching
-  week 8\nEven weeks only: 2 4 6 8\nMap: https://maps.apple.com/?ll=53.3856
- 766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
+ al\nTopic: Lab 4: Rectifier Circuits\nRoom: GLA.SG15\, GLA.SG16 — Stokes
+  Building\, ground floor\nTeaching week 8\nEven weeks only: 2 4 6 8\nAssig
+ nment 3 (20%) — due in week 9\nMap: https://maps.apple.com/?ll=53.385676
+ 6\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2306,7 +2277,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Practical) — Lab 4: Rec
+ tifier Circuits
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2396,19 +2368,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261028-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261028T170000
 DTEND;TZID=Europe/Dublin:20261028T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Mid-semester rec
+ ap
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 8\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Mid-semester recap\nRoom: GLA.SA301 — Stokes Extension\, 3rd fl
+ oor\nTeaching week 8\nNo Monday lecture this week (bank holiday)\nMap: htt
+ ps://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&
+ z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -2417,26 +2392,29 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Mid-semester
+  recap
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261029-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261029T100000
 DTEND;TZID=Europe/Dublin:20261029T120000
-SUMMARY:ESL1009 English Language in Use (Lecture)
+SUMMARY:ESL1009 English Language in Use (Lecture) — Assessment 1: Interpr
+ eting data
 LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
   Campus\, Dublin 9
-DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 8\nGr
- oup 02 - no class in week 7 (reading week)\nMap: https://maps.apple.com/?l
- l=53.3864061\,-6.2602759&q=DCU%20Henry%20Grattan%20Building&z=17
+DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nTop
+ ic: Assessment 1: Interpreting data\nRoom: GLA.CG03 — Henry Grattan Buil
+ ding\, ground floor\nTeaching week 8\nGroup 02 - no class in week 7 (readi
+ ng week)\nIn-class assessment\nMap: https://maps.apple.com/?ll=53.3864061\
+ ,-6.2602759&q=DCU%20Henry%20Grattan%20Building&z=17
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Henry Gratta
  n Building":geo:53.3864061,-6.2602759
@@ -2445,26 +2423,27 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3864061,-6.2602759&q=DCU%20Henr
  y%20Grattan%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:ESL1009 English Language in Use (Lecture)
+DESCRIPTION:ESL1009 English Language in Use (Lecture) — Assessment 1: Int
+ erpreting data
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261029-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261029T170000
 DTEND;TZID=Europe/Dublin:20261029T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 8\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 8\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -2473,7 +2452,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2507,20 +2486,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261102-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261102T100000
 DTEND;TZID=Europe/Dublin:20261102T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 7: Passi
+ ve filter circuits (Part 1)
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 9\nMa
- p: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bui
- lding&z=17
+ \nTopic: Lecture 7: Passive filter circuits (Part 1)\nRoom: GLA.FTG13 — 
+ Polaris Building\, ground floor\nTeaching week 9\nMap: https://maps.apple.
+ com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -2529,26 +2509,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 7: P
+ assive filter circuits (Part 1)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261102-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261102T140000
 DTEND;TZID=Europe/Dublin:20261102T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 4: Cou
+ nters
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 9\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%
- 20Stokes%20Building&z=17
+ ctical\nTopic: Lab 4: Counters\nRoom: GLA.SG16\, GLA.SG15 — Stokes Build
+ ing\, ground floor\nTeaching week 9\nDue Monday 9 November\nMap: https://m
+ aps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2557,7 +2539,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 4:
+  Counters
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2702,19 +2685,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261104-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261104T170000
 DTEND;TZID=Europe/Dublin:20261104T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 7: Passi
+ ve filter circuits (Part 1)
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 9\nMap: https://maps.ap
- ple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 7: Passive filter circuits (Part 1)\nRoom: GLA.SA301 — 
+ Stokes Extension\, 3rd floor\nTeaching week 9\nMap: https://maps.apple.com
+ /?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -2723,7 +2708,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 7: P
+ assive filter circuits (Part 1)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2757,20 +2743,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261105-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261105T170000
 DTEND;TZID=Europe/Dublin:20261105T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 9\nMap: https:
- //maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Schoo
- l&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 9\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20
+ Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -2779,7 +2765,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2813,20 +2799,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261109-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261109T100000
 DTEND;TZID=Europe/Dublin:20261109T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 8: Passi
+ ve filter circuits (Part 2)
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 10\nM
- ap: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bu
- ilding&z=17
+ \nTopic: Lecture 8: Passive filter circuits (Part 2)\nRoom: GLA.FTG13 — 
+ Polaris Building\, ground floor\nTeaching week 10\nMap: https://maps.apple
+ .com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -2835,26 +2822,29 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 8: P
+ assive filter circuits (Part 2)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261109-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261109T140000
 DTEND;TZID=Europe/Dublin:20261109T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab availa
+ ble
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 10\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU
- %20Stokes%20Building&z=17
+ ctical\nTopic: Lab available\nRoom: GLA.SG16\, GLA.SG15 — Stokes Buildin
+ g\, ground floor\nTeaching week 10\nNo new lab this week — the lab is op
+ en to catch up\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=D
+ CU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2863,7 +2853,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab av
+ ailable
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -2953,20 +2944,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEG1011-a317edc023@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261111T140000
 DTEND;TZID=Europe/Dublin:20261111T150000
-SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
+SUMMARY:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 3
 LOCATION:GLA.S144 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
  Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S144 — Stokes Building\, 1st floor\nTeaching week 10\nMap: htt
- ps://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z
- =17
+ Topic: Loop Quiz 3\nRoom: GLA.S144 — Stokes Building\, 1st floor\nTeachi
+ ng week 10\nSupervised test in S144 at 2pm — you must be on campus. Miss
+ ed a quiz? ONE replacement allowed\, Monday 23 November at 9am.\nMap: http
+ s://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=
+ 17
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -2975,7 +2968,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
+DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture) — Loop Quiz 3
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3009,19 +3002,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261111-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261111T170000
 DTEND;TZID=Europe/Dublin:20261111T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 8: Passi
+ ve filter circuits (Part 2)
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 10\nMap: https://maps.a
- pple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 8: Passive filter circuits (Part 2)\nRoom: GLA.SA301 — 
+ Stokes Extension\, 3rd floor\nTeaching week 10\nMap: https://maps.apple.co
+ m/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -3030,26 +3025,30 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 8: P
+ assive filter circuits (Part 2)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261112-ESL1009-5778f3272b@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261112T100000
 DTEND;TZID=Europe/Dublin:20261112T120000
-SUMMARY:ESL1009 English Language in Use (Lecture)
+SUMMARY:ESL1009 English Language in Use (Lecture) — Assessment 2: Argumen
+ t on a topical media issue
 LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
   Campus\, Dublin 9
-DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nRoo
- m: GLA.CG03 — Henry Grattan Building\, ground floor\nTeaching week 10\nG
- roup 02 - no class in week 7 (reading week)\nMap: https://maps.apple.com/?
- ll=53.3864061\,-6.2602759&q=DCU%20Henry%20Grattan%20Building&z=17
+DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nTop
+ ic: Assessment 2: Argument on a topical media issue\nRoom: GLA.CG03 — He
+ nry Grattan Building\, ground floor\nTeaching week 10\nGroup 02 - no class
+  in week 7 (reading week)\nIn-class assessment: write a response/argument 
+ on a topical issue from a media source\nMap: https://maps.apple.com/?ll=53
+ .3864061\,-6.2602759&q=DCU%20Henry%20Grattan%20Building&z=17
 CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Henry Gratta
  n Building":geo:53.3864061,-6.2602759
@@ -3058,26 +3057,27 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3864061,-6.2602759&q=DCU%20Henr
  y%20Grattan%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:ESL1009 English Language in Use (Lecture)
+DESCRIPTION:ESL1009 English Language in Use (Lecture) — Assessment 2: Arg
+ ument on a topical media issue
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261112-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261112T170000
 DTEND;TZID=Europe/Dublin:20261112T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 10\nMap: https
- ://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Scho
- ol&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 10\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%2
+ 0Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -3086,7 +3086,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3120,20 +3120,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261116-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261116T100000
 DTEND;TZID=Europe/Dublin:20261116T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 9: Energ
+ y & power in AC circuits
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 11\nM
- ap: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bu
- ilding&z=17
+ \nTopic: Lecture 9: Energy & power in AC circuits\nRoom: GLA.FTG13 — Pol
+ aris Building\, ground floor\nTeaching week 11\nMap: https://maps.apple.co
+ m/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -3142,26 +3143,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 9: E
+ nergy & power in AC circuits
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261116-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261116T140000
 DTEND;TZID=Europe/Dublin:20261116T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 5: Ard
+ uino
 LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
  evin Campus\, Dublin 9
 DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 11\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU
- %20Stokes%20Building&z=17
+ ctical\nTopic: Lab 5: Arduino\nRoom: GLA.SG16\, GLA.SG15 — Stokes Buildi
+ ng\, ground floor\nTeaching week 11\nDue Friday 27 November\nMap: https://
+ maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -3170,7 +3173,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical) — Lab 5:
+  Arduino
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3316,19 +3320,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261118-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261118T170000
 DTEND;TZID=Europe/Dublin:20261118T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 9: Energ
+ y & power in AC circuits
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 11\nMap: https://maps.a
- pple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 9: Energy & power in AC circuits\nRoom: GLA.SA301 — Sto
+ kes Extension\, 3rd floor\nTeaching week 11\nMap: https://maps.apple.com/?
+ ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -3337,7 +3343,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 9: E
+ nergy & power in AC circuits
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3371,20 +3378,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261119-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261119T170000
 DTEND;TZID=Europe/Dublin:20261119T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
  mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 11\nMap: https
- ://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Scho
- ol&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.QG15 — DCU Business School\, ground floor\nTeaching wee
+ k 11\nMap: https://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%2
+ 0Business%20School&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
   School":geo:53.3862005,-6.2574405
@@ -3393,26 +3400,29 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
  20Business%20School&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEG1011-d1bf5ddc09@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261123T090000
 DTEND;TZID=Europe/Dublin:20261123T100000
-SUMMARY:EEG1011 Engineering Mathematics IV (Lecture)
+SUMMARY:EEG1011 Engineering Mathematics IV (Lecture) — Replacement Loop q
+ uiz (only if you missed one)
 LOCATION:GLA.S143 — Stokes Building\, 1st floor\, DCU Glasnevin Campus\, 
  Dublin 9
 DESCRIPTION:Module: EEG1011 — Engineering Mathematics IV\nType: Lecture\n
- Room: GLA.S143 — Stokes Building\, 1st floor\nTeaching week 12\nMap: htt
- ps://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Building&z
- =17
+ Topic: Replacement Loop quiz (only if you missed one)\nRoom: GLA.S143 — 
+ Stokes Building\, 1st floor\nTeaching week 12\nOnly for students who misse
+ d ONE quiz — you may not do a quiz twice. Room not given in the email: c
+ heck Loop.\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%2
+ 0Stokes%20Building&z=17
 CATEGORIES:EEG1011
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -3421,26 +3431,28 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture)
+DESCRIPTION:EEG1011 Engineering Mathematics IV (Lecture) — Replacement Lo
+ op quiz (only if you missed one)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEN1018-3ba12a4829@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261123T100000
 DTEND;TZID=Europe/Dublin:20261123T110000
-SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture)
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 10: Depe
+ ndent sources
 LOCATION:GLA.FTG13 — Polaris Building\, ground floor\, DCU Glasnevin Camp
  us\, Dublin 9
 DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
- \nRoom: GLA.FTG13 — Polaris Building\, ground floor\nTeaching week 12\nM
- ap: https://maps.apple.com/?ll=53.3863127\,-6.2558544&q=DCU%20Polaris%20Bu
- ilding&z=17
+ \nTopic: Lecture 10: Dependent sources\nRoom: GLA.FTG13 — Polaris Buildi
+ ng\, ground floor\nTeaching week 12\nMap: https://maps.apple.com/?ll=53.38
+ 63127\,-6.2558544&q=DCU%20Polaris%20Building&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Polaris Buil
  ding":geo:53.3863127,-6.2558544
@@ -3449,26 +3461,27 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3863127,-6.2558544&q=DCU%20Pola
  ris%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture)
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 10: 
+ Dependent sources
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261123-EEN1022-7e3dcfeac7@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261123T140000
-DTEND;TZID=Europe/Dublin:20261123T170000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Practical)
-LOCATION:GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\, DCU Glasn
- evin Campus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Pra
- ctical\nRoom: GLA.SG16\, GLA.SG15 — Stokes Building\, ground floor\nTeac
- hing week 12\nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU
- %20Stokes%20Building&z=17
+DTEND;TZID=Europe/Dublin:20261123T150000
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Kit return)
+LOCATION:GLA.SG16 — Stokes Building\, ground floor\, DCU Glasnevin Campus
+ \, Dublin 9
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Kit
+  return\nRoom: GLA.SG16 — Stokes Building\, ground floor\nTeaching week 
+ 12\nPhysics & Paris students only\nMap: https://maps.apple.com/?ll=53.3856
+ 766\,-6.2556846&q=DCU%20Stokes%20Building&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Build
  ing":geo:53.3856766,-6.2556846
@@ -3477,26 +3490,26 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Practical)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Kit return)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261124-EEN1022-6b617dfd62@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261124T110000
 DTEND;TZID=Europe/Dublin:20261124T120000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 12\n
- Map: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Ex
- tension&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.SA301 — Stokes Extension\, 3rd floor\nTeaching week 12\
+ nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20E
+ xtension&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -3505,7 +3518,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3539,20 +3552,20 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEN1022-70aabefcfd@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261125T120000
 DTEND;TZID=Europe/Dublin:20261125T130000
-SUMMARY:EEN1022 Digital & Analogue Electronics I (Lecture)
+SUMMARY:EEN1022 Digital & Analogue Electronics I (Tutorial)
 LOCATION:GLA.SA101 — Stokes Extension\, 1st floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Lec
- ture\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 12\n
- Map: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Ex
- tension&z=17
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nType: Tut
+ orial\nRoom: GLA.SA101 — Stokes Extension\, 1st floor\nTeaching week 12\
+ nMap: https://maps.apple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20E
+ xtension&z=17
 CATEGORIES:EEN1022
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -3561,7 +3574,7 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Lecture)
+DESCRIPTION:EEN1022 Digital & Analogue Electronics I (Tutorial)
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3623,19 +3636,21 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:20261125-EEN1018-c6dbc70bba@dcu.timetable
-DTSTAMP:20260914T191341Z
+DTSTAMP:20260929T205137Z
 DTSTART;TZID=Europe/Dublin:20261125T170000
 DTEND;TZID=Europe/Dublin:20261125T180000
-SUMMARY:EEN1018 Circuits Analysis Techniques
+SUMMARY:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 10: Depe
+ ndent sources
 LOCATION:GLA.SA301 — Stokes Extension\, 3rd floor\, DCU Glasnevin Campus\
  , Dublin 9
-DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nRoom: GLA.SA3
- 01 — Stokes Extension\, 3rd floor\nTeaching week 12\nMap: https://maps.a
- pple.com/?ll=53.3856766\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nType: Lecture
+ \nTopic: Lecture 10: Dependent sources\nRoom: GLA.SA301 — Stokes Extensi
+ on\, 3rd floor\nTeaching week 12\nMap: https://maps.apple.com/?ll=53.38567
+ 66\,-6.2556846&q=DCU%20Stokes%20Extension&z=17
 CATEGORIES:EEN1018
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:2
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
  in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Stokes Exten
  sion":geo:53.3856766,-6.2556846
@@ -3644,7 +3659,8 @@ URL;VALUE=URI:https://maps.apple.com/?ll=53.3856766,-6.2556846&q=DCU%20Stok
  es%20Extension&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1018 Circuits Analysis Techniques
+DESCRIPTION:EEN1018 Circuits Analysis Techniques (Lecture) — Lecture 10: 
+ Dependent sources
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -3677,31 +3693,214 @@ TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:20261126-EEN1022-0ddac847a7@dcu.timetable
-DTSTAMP:20260914T191341Z
-DTSTART;TZID=Europe/Dublin:20261126T170000
-DTEND;TZID=Europe/Dublin:20261126T180000
-SUMMARY:EEN1022 Digital & Analogue Electronics I
-LOCATION:GLA.QG15 — DCU Business School\, ground floor\, DCU Glasnevin Ca
- mpus\, Dublin 9
-DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nRoom: GLA
- .QG15 — DCU Business School\, ground floor\nTeaching week 12\nMap: https
- ://maps.apple.com/?ll=53.3862005\,-6.2574405&q=DCU%20DCU%20Business%20Scho
- ol&z=17
-CATEGORIES:EEN1022
+UID:20261203-ESL1009-5778f3272b@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261203T100000
+DTEND;TZID=Europe/Dublin:20261203T120000
+SUMMARY:ESL1009 English Language in Use (Lecture) — Assessment 3: Group r
+ esearch project
+LOCATION:GLA.CG03 — Henry Grattan Building\, ground floor\, DCU Glasnevin
+  Campus\, Dublin 9
+DESCRIPTION:Module: ESL1009 — English Language in Use\nType: Lecture\nTop
+ ic: Assessment 3: Group research project\nRoom: GLA.CG03 — Henry Grattan
+  Building\, ground floor\nTeaching week 13\nIn-class group research projec
+ t on a historical/prominent figure in Irish society. Week 13\, usual Thurs
+ day slot\, for everyone.\nMap: https://maps.apple.com/?ll=53.3864061\,-6.2
+ 602759&q=DCU%20Henry%20Grattan%20Building&z=17
+CATEGORIES:ESL1009
 STATUS:CONFIRMED
 TRANSP:OPAQUE
-SEQUENCE:1
+SEQUENCE:0
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="DCU Glasnevin Campus\nDubl
- in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU DCU Business
-  School":geo:53.3862005,-6.2574405
-GEO:53.3862005;-6.2574405
-URL;VALUE=URI:https://maps.apple.com/?ll=53.3862005,-6.2574405&q=DCU%20DCU%
- 20Business%20School&z=17
+ in 9";X-APPLE-RADIUS=80;X-APPLE-REFERENCEFRAME=1;X-TITLE="DCU Henry Gratta
+ n Building":geo:53.3864061,-6.2602759
+GEO:53.3864061;-6.2602759
+URL;VALUE=URI:https://maps.apple.com/?ll=53.3864061,-6.2602759&q=DCU%20Henr
+ y%20Grattan%20Building&z=17
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:EEN1022 Digital & Analogue Electronics I
+DESCRIPTION:ESL1009 English Language in Use (Lecture) — Assessment 3: Gro
+ up research project
 TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261005-EEN1022-due-11596152b6@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261005T235900
+DTEND;TZID=Europe/Dublin:20261005T235900
+SUMMARY:EEN1022 — Lab 1 (Logic) due
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nTeaching 
+ week 5
+CATEGORIES:EEN1022,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 1 (Logic) due
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 1 (Logic) due
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261009-EEN1018-due-44c7289ea8@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261009T235900
+DTEND;TZID=Europe/Dublin:20261009T235900
+SUMMARY:EEN1018 — Assignment 1 due (10%)
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nTeaching week
+  5\nLab 2 (AC Analysis) write-up. The module schedule only says week 5: Fr
+ iday assumed\, check Loop.
+CATEGORIES:EEN1018,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 1 due (10%)
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 1 due (10%)
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261017-EEN1022-due-e1394cb961@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261017T235900
+DTEND;TZID=Europe/Dublin:20261017T235900
+SUMMARY:EEN1022 — Lab 2 (Diode) due
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nTeaching 
+ week 6
+CATEGORIES:EEN1022,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 2 (Diode) due
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 2 (Diode) due
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261023-EEN1018-due-bc4685834b@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261023T235900
+DTEND;TZID=Europe/Dublin:20261023T235900
+SUMMARY:EEN1018 — Assignment 2 due (20%)
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nTeaching week
+  7\nLab 3 (RLC Resonance) write-up. The module schedule only says week 7: 
+ Friday assumed\, check Loop.
+CATEGORIES:EEN1018,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 2 due (20%)
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 2 due (20%)
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261026-EEN1022-due-ff9b18acf8@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261026T235900
+DTEND;TZID=Europe/Dublin:20261026T235900
+SUMMARY:EEN1022 — Lab 3 (Transistor) due
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nTeaching 
+ week 8\nDue even though it is the October bank holiday
+CATEGORIES:EEN1022,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 3 (Transistor) due
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 3 (Transistor) due
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261106-EEN1018-due-1674779bfd@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261106T235900
+DTEND;TZID=Europe/Dublin:20261106T235900
+SUMMARY:EEN1018 — Assignment 3 due (20%)
+DESCRIPTION:Module: EEN1018 — Circuits Analysis Techniques\nTeaching week
+  9\nLab 4 (Rectifier Circuits) write-up. The module schedule only says wee
+ k 9: Friday assumed\, check Loop.
+CATEGORIES:EEN1018,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 3 due (20%)
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1018 — Assignment 3 due (20%)
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261109-EEN1022-due-838c6c5f8a@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261109T235900
+DTEND;TZID=Europe/Dublin:20261109T235900
+SUMMARY:EEN1022 — Lab 4 (Counters) due
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nTeaching 
+ week 10
+CATEGORIES:EEN1022,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 4 (Counters) due
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 4 (Counters) due
+TRIGGER:-PT6H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:20261127-EEN1022-due-9618e31e58@dcu.timetable
+DTSTAMP:20260929T205137Z
+DTSTART;TZID=Europe/Dublin:20261127T235900
+DTEND;TZID=Europe/Dublin:20261127T235900
+SUMMARY:EEN1022 — Lab 5 (Arduino) due
+DESCRIPTION:Module: EEN1022 — Digital & Analogue Electronics I\nTeaching 
+ week 12
+CATEGORIES:EEN1022,Deadlines
+TRANSP:TRANSPARENT
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 5 (Arduino) due
+TRIGGER:-PT30H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:EEN1022 — Lab 5 (Arduino) due
+TRIGGER:-PT6H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
